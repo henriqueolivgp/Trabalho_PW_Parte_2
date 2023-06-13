@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+.content-wrap{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+nav {
+  background: #81a05a;
+  height: 80px;
+  width: 100%;
+}
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul {
+  z-index: 1;
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a#links-button {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+#links-button.active,
+#links-button:hover {
+  text-decoration: none;
+  background-color: #3c6255;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+.page-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1102px) {
+  label.logo {
+    font-size: 24px;
+    padding-left: 50px;
+  }
+  nav ul li #links-button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 953px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  label.logo {
+    font-size: 22px;
+    padding-left: 50px;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li #links-button {
+    font-size: 20px;
+  }
+  #links-button:hover,
+  #links-button.active {
+    background: none;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+.nav-humberger {
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+/* navbar ending */
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    font-family: 'roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card{
+    width: 90%;
+    height: 70%;
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 8px solid #81a05a;
+    position: relative;
+  }
+  
+  .card-img{
+
+    object-fit: cover;
+    border-radius: 1rem;
+    background-size: cover;
+   /* background-position: center;
+    background-repeat: no-repeat;*/
+  }
+
+  .back-img{
+    width: 100%;
+    height: 100%;
+  } 
+  
+  .card-body{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 1.5rem;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+  }
+  
+  .card:hover .card-body{
+    right: 0;
+  }
+  
+  .card-title{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+  }
+  
+  .card-sub-title{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .card-info{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
+    text-align: justify;
+  }
+  
+  .card-btn{
+    color: white;
+    background: #3c6255;
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 5px;
+    /*text-transform: capitalize;*/
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  @media (max-width: 1580px) {
+    .card-img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+      background-image: url(../IMG/PCR2938.jpg);
+      background-size: cover;
+     /* background-position: center;
+      background-repeat: no-repeat;*/
+    }
+
+    .card-img-2{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+      background-image: url(../IMG/Imagem\ 005-2.jpg);
+      background-size: cover;
+     /* background-position: center;
+      background-repeat: no-repeat;*/
+    }
+  }
