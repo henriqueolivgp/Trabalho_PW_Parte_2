@@ -1,3 +1,9 @@
+
+<?php
+# FUNÇÕES AUXILIADORAS
+require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt'pt">
 
@@ -19,12 +25,23 @@
 
 <body >
   <!--Navbar Start here-->
-  <?php
-  include_once __DIR__ . '/APP/Compunents/navbar.php';
-  ?>
+  <nav style="background-color: #81a05a; height: 60PX;" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold " href="#">Vascoes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        </ul>
+        <span class="navbar-text h5 ml-auto" >
+          <a style="text-decoration: none;" href="/APP/Register.php">Register</a> <a style="text-decoration: none;" href="/APP/Login.php">/ login</a> 
+        </span>
+      </div>
+    </div>
+  </nav>
   <!--Navbar finished here-->
 
-  <div class="container vh-100">
+  <div class="container vh-100 d-flex align-items-center justify-content-center">
 
     <!--
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -50,16 +67,14 @@
     </div> -->
 
     <!-- Mapa e Video c -->
-    <div class="justify-content-center mt-5">
-      <div class="row">
-        <div class="col">
+      <div class="row d-flex align-items-center w-100">
+        <div class="col " >
           <iframe class="mapa" style="border-radius: 0.5rem;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30406.375379111447!2d-8.521977968038772!3d41.90375041078295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd25a0166ca81ea7%3A0x500ebbde4911390!2zVmFzY8O1ZXM!5e1!3m2!1spt-PT!2spt!4v1680804396099!5m2!1spt-PT!2spt" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="col">
           <iframe class="video" width="100%" height="315" style="border-radius: 0.5rem;" src="https://www.youtube.com/embed/4s0CmCO-R7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
     <!-- Mapa e video acabam aqui-->
 
   </div>
@@ -86,7 +101,7 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
           <p class="copyright-text">Copyright &copy; 2023 Este trabalho foi realizado por
-            <a href="https://github.com/henriqueolivgp">Henrique Oliveira</a> e <a href="https://github.com/pedrof04">Pedro Ferreira</a>.
+            <a href="https://github.com/henriqueolivgp" target="_blank">Henrique Oliveira</a> e <a href="https://github.com/pedrof04" target="_blank">Pedro Ferreira</a>.
           </p>
         </div>
       </div>
