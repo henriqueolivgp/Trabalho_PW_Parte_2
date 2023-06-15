@@ -4,7 +4,7 @@
 
 # INSERE DADOS DA CONEXÃO COM O PDO UTILIZANDO SQLITE
 
-require __DIR__ . '/criar-conexao.php';
+require __DIR__ . '/connection.php';
 
 # APAGA TABELA SE ELA EXISTIR
 $pdo->exec('DROP TABLE IF EXISTS utilizadores;');
@@ -30,11 +30,11 @@ echo 'Tabela utilizadores criada!' . PHP_EOL;
 
 # ABAIXO UM ARRAY SIMULANDO A DADOS DE UM UTILIZADOR 
 $utilizador = [
-    'nome' => 'Wenderson',
-    'apelido' => 'Wanzeller',
-    'nif' => '294733167',
-    'telemovel' => '917315200',
-    'email' => 'wendersonwanzeller@estg.ipvc.pt',
+    'nome' => 'User',
+    'apelido' => 'Teste',
+    'nif' => '748524578',
+    'telemovel' => '985478412',
+    'email' => 'Userteste@teste.pt',
     'foto' => null,
     'administrador' => true,
     'dono' => true,

@@ -18,6 +18,7 @@ require_once __DIR__ . '/../auxiliadores/auxiliador.php';
 if (isset($_SESSION['id']) || isset($_COOKIE['id'])) {
 
     # REDIRECIONA UTILIZADOR PARA TELA INICIAL
-    $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '/aplicacao/';
+    $home_url = 'http://' . $_SERVER['HTTP_HOST'] . '/../../APP/';
     header('Location: ' . $home_url);
 }
+

@@ -3,7 +3,7 @@
 ####################
 ### DEPENDÊNCIAS ###
 ####################
-require_once __DIR__ . '/../../infraestrutura/basededados/repositorio-utilizador.php';
+require_once __DIR__ . '/../../infrastructure/bd/user.php';
 require_once __DIR__ . '/../../validacao/admin/validar-utilizador.php';
 require_once __DIR__ . '/../../validacao/admin/validar-palavra-passe.php';
 require_once __DIR__ . '/../../auxiliadores/auxiliador.php';

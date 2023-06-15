@@ -1,7 +1,7 @@
 <?php
 
 $titulo = '- Ceia';
-include_once __DIR__ . '/Compunents/cabecalho.php';
+include_once __DIR__ . '/Compunents/header.php';
 
 ?>
 
@@ -37,7 +37,7 @@ include_once __DIR__ . '/Compunents/cabecalho.php';
 
   <?php
 
-  include_once __DIR__ . '/Compunents/header.php';
+  include_once __DIR__ . '/Compunents/footer.php';
 
 
   ?>

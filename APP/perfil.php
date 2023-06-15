@@ -26,7 +26,7 @@ require_once __DIR__ . '/Compunents/header.php';
       <main class="bg-light">
         <section class="py-4">
           <div class="d-flex justify-content">
-            <a href="/index.php"><button type="button" class="btn btn-secondary px-5 me-2">Voltar</button></a>
+            <a href="/APP/index.php"><button type="button" class="btn btn-secondary px-5 me-2">Voltar</button></a>
             <a href="/APP/palavra-passe.php"><button class="btn btn-warning px-2 me-2">Alterar Palavra Passe</button></a>
           </div>
         </section>
