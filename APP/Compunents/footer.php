@@ -4,13 +4,13 @@
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h6>About</h6>
-          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web.</p>
+          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web. Se desejar ver o nosso Repositório do GitHub ou o nosso perfil do GitHub basta carregar em Repositório ou no nosso nome</p>
         </div>
 
         <div class="col-xs-6 col-md-3">
           <h6>Quick Link</h6>
           <ul class="footer-links">
-            <li><a href="https://github.com/henriqueolivgp/Trabalho_PW_Parte_2" target="_blank">Repositório</a></li>
+            <li><a style="text-decoration: none;" href="https://github.com/henriqueolivgp/Trabalho_PW_Parte_2" target="_blank">Repositório</a></li>
           </ul>
         </div>
       </div>
@@ -20,7 +20,7 @@
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
           <p class="copyright-text">Copyright &copy; 2023 Este trabalho foi realizado por
-            <a href="https://github.com/henriqueolivgp">Henrique Oliveira</a> e <a href="https://github.com/pedrof04">Pedro Ferreira</a>.
+            <a style="text-decoration: none;" href="https://github.com/henriqueolivgp" target="_blank">Henrique Oliveira</a> e <a style="text-decoration: none;" href="https://github.com/pedrof04" target="_blank">Pedro Ferreira</a>.
           </p>
         </div>
       </div>

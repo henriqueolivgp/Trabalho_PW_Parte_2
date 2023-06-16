@@ -27,7 +27,7 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
   <!--Navbar Start here-->
   <nav style="background-color: #81a05a; height: 60PX;" class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand font-weight-bold " href="#">Vascoes</a>
+      <a class="navbar-brand font-weight-bold " href="/index.php">Vascoes</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
