@@ -21,7 +21,6 @@ require_once __DIR__ . '/Compunents/header.php';
     <div class="pt-1 ">
       <div class="p-5 mb-2 bg-info text-white">
         <h1>Registo de Utilizadores</h1>
-        <p>CRUD | Front-end Bootstrap | Back-end PHP</p>
       </div>
       <main class="bg-light">
         <section class="py-4">

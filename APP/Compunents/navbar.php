@@ -26,7 +26,7 @@
         </li>
       </ul>
       <span class="navbar-text h5">
-        <form action="../../src/controllers/admin/controlar-utilizador.php" method="post">
+        <form action="../../src/controllers/aplicacao/controlar-autenticacao.php" method="post">
           <button class="btn btn-danger px-1" type="submit" name="utilizador" value="logout">Fazer Logout</button>
         </form>
       </span>
