@@ -6,8 +6,6 @@ $titulo = '- Corno do Bico';
 require_once __DIR__ . '/Compunents/header.php';
 ?>
 
-
-
 <body>
 
   <?php
