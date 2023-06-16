@@ -227,7 +227,7 @@ function atualizarPerfil($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../aplicacao/perfil.php' . $params);
+        header('location: /../../../APP/perfil.php' . $params);
     } else {
 
         # MEDIDA DE SEGURANÇA PARA GARANTIR QUE UTILIZADO SÓ MUDARÁ O PRÓPRIO PERFIL
@@ -258,7 +258,7 @@ function atualizarPerfil($requisicao)
             $params = '?' . http_build_query($dados);
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /../aplicacao/perfil.php' . $params);
+            header('location: /../../../APP/index.php' . $params);
         }
     }
 }
