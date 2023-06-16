@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../src/middleware/middleware-utilizador.php';
 
-$titulo = '- Ceia';
+$titulo = '- Corno do Bico';
 require_once __DIR__ . '/Compunents/header.php';
 ?>
 
@@ -48,7 +48,7 @@ require_once __DIR__ . '/Compunents/header.php';
           <div class="col p-2">
             <img src="../recursos/IMG/Flora/Flora_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="..." >
           </div>
-          <div class="col-md-8 p-2">
+          <div class="col-md-8 ">
             <div class="card-body " style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
               <h3 class="card-title">Flora</h3>
               <p class="card-text">No corno do bico encontramos uma flora diversificada ou seja um
