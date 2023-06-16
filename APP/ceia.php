@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../src/middleware/middleware-utilizador.php';
+
 $titulo = '- Ceia';
 include_once __DIR__ . '/Compunents/header.php';
 
@@ -15,6 +17,7 @@ include_once __DIR__ . '/Compunents/header.php';
   <!--Navbar finished here-->
 
   <div class="container  h-100">
+    <h1 class="page-title mt-4  text-center ">Ceia</h1>
     <!-- conteúdo da página aqui -->
     <div class="container2 " ">
       <div class=" row justify-content-center" style="margin-top:4%;">

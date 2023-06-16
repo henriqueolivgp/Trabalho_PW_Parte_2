@@ -9,6 +9,23 @@ include_once __DIR__ . '/Compunents/header.php';
 
 <body>
     <main>
+
+        <!--Navbar Start here-->
+        <nav style="background-color: #81a05a; height: 60PX;" class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand font-weight-bold " href="/index.php">Vascoes</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    </ul>
+                    <span class="navbar-text h5 ml-auto">
+                        <a style="text-decoration: none;" href="/APP/Register.php">Register</a> <a style="text-decoration: none;" href="/APP/Login.php">/ login</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+
         <div class="container vh-100 d-flex align-items-center justify-content-center text-center bg-light">
             <div class="w-75">
                 <section>

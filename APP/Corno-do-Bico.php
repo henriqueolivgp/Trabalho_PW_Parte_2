@@ -1,4 +1,7 @@
 <?php
+
+require_once __DIR__ . '/../src/middleware/middleware-utilizador.php';
+
 $titulo = '- Ceia';
 require_once __DIR__ . '/Compunents/header.php';
 ?>
@@ -15,11 +18,11 @@ require_once __DIR__ . '/Compunents/header.php';
 
   <div class="container">
 
-    <h1 class="page-title">Corno do Bico</h1>
+    <h1 class="page-title mt-4 mb-4  text-center ">Corno do Bico</h1>
 
     <div class="row row-cols-1 ">
 
-      <div class="card mb-3 align-items-center ">
+      <div class="card mb-3">
         <div class="row d-flex align-items-center w-100">
           <div class="col p-2">
             <img src="../recursos/IMG/Fauna/Fauna_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="..." >
@@ -43,10 +46,10 @@ require_once __DIR__ . '/Compunents/header.php';
       <div class="card mb-3 align-items-center ">
         <div class="row d-flex align-items-center w-100">
           <div class="col p-2">
-            <img src="../recursos/IMG/Fauna/Fauna_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="..." >
+            <img src="../recursos/IMG/Flora/Flora_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="..." >
           </div>
           <div class="col-md-8 p-2">
-            <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
+            <div class="card-body " style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
               <h3 class="card-title">Flora</h3>
               <p class="card-text">No corno do bico encontramos uma flora diversificada ou seja um
               conjunto de plantas presentes nesta região ou ecossistema. Podemos
@@ -55,7 +58,7 @@ require_once __DIR__ . '/Compunents/header.php';
               pinhal, lameiros e uma turfeira. As espécies dominantes incluem o
               carvalho-alvarinho e o azevinho nos bosques mistos e o
               freixo-de-folha-estreita e o amieiro nos bosques ripícolas.</p>
-              <a style="background-color: #3c6255; border: 0;" href="/APP/Fauna.php" class="btn btn-primary">Ver mais...</a>
+              <a style="background-color: #3c6255; border: 0;" href="/APP/Flora.php" class="btn btn-primary">Ver mais...</a>
             </div>
           </div>
         </div>
@@ -64,7 +67,7 @@ require_once __DIR__ . '/Compunents/header.php';
       <div class="card mb-3 align-items-center ">
         <div class="row d-flex align-items-center w-100">
           <div class="col p-2">
-            <img src="../recursos/IMG/Fauna/Fauna_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="..." >
+            <img src="../recursos/IMG/Astrocamp_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="..." >
           </div>
           <div class="col-md-8 p-2">
             <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
@@ -74,7 +77,7 @@ require_once __DIR__ . '/Compunents/header.php';
               e isolado. O programa é direcionado a estudantes do ensino secundário, que serão selecionados com base na sua
               motivação e desempenho académico. A participação para alunos portugueses no programa tem
               zero custos adicionais.</p>
-              <a style="background-color: #3c6255; border: 0;" href="/APP/Fauna.php" class="btn btn-primary">Ver mais...</a>
+              <a style="background-color: #3c6255; border: 0;" href="https://astrocamp.astro.up.pt/pt/programa.html" target="_blank" class="btn btn-primary">Ver mais...</a>
             </div>
           </div>
         </div>
