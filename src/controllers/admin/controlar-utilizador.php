@@ -297,7 +297,7 @@ function alterarPalavraPasse($requisicao)
             $_SESSION['sucesso'] = 'Palavra passe alterada com sucesso!';
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /../aplicacao/palavra-passe.php');
+            header('location: /../APP/palavra-passe.php');
         }
     }
 }
