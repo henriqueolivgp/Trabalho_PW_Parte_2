@@ -1,9 +1,9 @@
 <?php
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES AUTENTICADOS ACESSEM ESTE SITIO
-require_once('./src/middleware/middleware-utilizador.php');
+require_once('../src/middleware/middleware-utilizador.php');
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
-$titulo = ' - Altarar Palavra Passe';
+$titulo = ' - Alterar Palavra Passe';
 include_once __DIR__ . '/Compunents/header.php';
 
 # ACESSA DE FUNÇÕES AUXILIADORAS. 
@@ -21,7 +21,7 @@ $utilizador = utilizador();
     </div>
     <main class="bg-light">
       <section class="py-4">
-        <a href="/aplicacao/perfil.php"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
+        <a href="/APP/perfil.php"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
       </section>
       <section>
         <?php
