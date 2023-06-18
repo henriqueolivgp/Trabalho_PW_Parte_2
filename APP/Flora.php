@@ -35,7 +35,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 Drosera rotundifolia é uma planta carnívora encontrada em regiões frias do hemisfério norte,
@@ -64,7 +64,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 O azevinho (Ilex aquifolium) é nativo da Europa, Norte da África e Oeste da Ásia. É conhecido
@@ -91,7 +91,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 Carvalheira é uma floresta ou bosque de carvalhos. São importantes ecossistemas que abrigam

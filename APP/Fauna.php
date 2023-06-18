@@ -38,7 +38,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 O lobo-ibérico (Canis lupus signatus) é uma subespécie de lobo nativa da Península Ibérica. São animais
@@ -69,7 +69,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 A águia-de-asa-redonda (Buteo buteo), também conhecida como bútio-comum. É uma ave de rapina de porte médio,
@@ -99,7 +99,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 A coruja-do-mato é uma ave de rapina de dimensão média e aspecto compacto. Possui asas relativamente curtas,
@@ -128,7 +128,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 Garrano é uma raça de cavalo nativa do norte de Portugal, conhecida pela sua resistência e adaptabilidade a
@@ -159,7 +159,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 "Javali-europeu" é o nome comum dado à subespécie Sus scrofa, que é uma das várias subespécies de javali
@@ -187,7 +187,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 O corço (Capreolus capreolus) é uma espécie de cervo encontrado na Europa, Ásia Ocidental e Ásia Central. É um
@@ -218,7 +218,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+          <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 O noitibó-da-europa (Caprimulgus europaeus) é uma ave noturna encontrada em grande parte da Europa, norte da
