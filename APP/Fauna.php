@@ -25,7 +25,7 @@ require_once __DIR__ . '/Compunents/header.php';
 
     <div class="card mb-3 align-items-center">
       <div class="row d-flex align-items-center w-100">
-        <div class=" col-lg-4 col p-4">
+        <div class="col-lg-4 col p-4">
           <div class="flip-card w-100">
             <div class="flip-card-inner">
               <div class="flip-card-front-1"></div>
@@ -57,7 +57,7 @@ require_once __DIR__ . '/Compunents/header.php';
     <div class="card mb-3 align-items-center">
       <div class="row d-flex align-items-center w-100">
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
+          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; ">
             <div class="card-text">
               <p>
                 A águia-de-asa-redonda (Buteo buteo), também conhecida como bútio-comum. É uma ave de rapina de porte médio,
