@@ -3,20 +3,20 @@
 /**
  * FUNÇÃO RESPONSÁVEL PELA VALIDAÇÃO DO LOGIN DE UM UTILIZADOR
  */
-function validarLogin($reqisicao)
+function validarLogin($requisicao)
 {
     # RETIRA ESPAÇOS VAZIOS
-    foreach ($reqisicao as $key => $value) {
-        $reqisicao[$key] =  trim($reqisicao[$key]);
+    foreach ($requisicao as $key => $value) {
+        $requisicao[$key] =  trim($requisicao[$key]);
     }
 
     # VALIDANDO O CAMPO EMAIL
-    if (!filter_var($reqisicao['email'], FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($requisicao['email'], FILTER_VALIDATE_EMAIL)) {
         $erros['email'] = 'O campo Email não pode estar vazio e deve ter o formato de email, a exemplo de: nome@dominio.pt.';
     }
 
     # VALIDANDO O CAMPO PALAVRA PASSE
-    if (empty($reqisicao['palavra_passe']) || strlen($reqisicao['palavra_passe']) < 6) {
+    if (empty($requisicao['palavra_passe']) || strlen($requisicao['palavra_passe']) < 6) {
         $erros['palavra_passe'] = 'O campo Palavra Passe não pode estar vazio e deve ter no mínio 6 caracteres.';
     }
 
@@ -26,25 +26,25 @@ function validarLogin($reqisicao)
     }
 
     # RETORNA UTILIZADOR VALIDADO
-    return $reqisicao;
+    return $requisicao;
 }
 
 /**
  * FUNÇÃO RESPONSÁVEL PELA VALIDAÇÃO DA PALAVRA PASSE DE UM UTILIZADOR
  */
-function validarPalavraPasse($reqisicao)
+function validarPalavraPasse($requisicao)
 {
     if (!isset($_SESSION['id'])) {
 
         # RECUPERA DADOS DO UTILIZADOR
-        $utilizador = lerUtilizadorPorEmail($reqisicao['email']);
+        $utilizador = lerUtilizadorPorEmail($requisicao['email']);
 
         # VALIDANDO O CAMPO EMAIL
         if (!$utilizador) {
             $erros['email'] = 'Verifique seu email.';
         }
 
-        if (!password_verify($reqisicao['palavra_passe'], $utilizador['palavra_passe'])) {
+        if (!password_verify($requisicao['palavra_passe'], $utilizador['palavra_passe'])) {
             $erros['palavra_passe'] = 'Verifique sua palavra passe.';
         }
 
