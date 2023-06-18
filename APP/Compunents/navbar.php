@@ -26,8 +26,8 @@
           <a class="nav-link" href="/APP/Miradouros.php">Miradouros</a>
         </li>
       </ul>
-      <span class="navbar-text h5">
-      <a href="caminho_da_pasta/perfil.php"><button class="btn btn-outline-secondary px-1" type="button">Editar</button></a>
+      <span class="navbar-text h5 d-flex justify-content-center">
+      <a href="caminho_da_pasta/perfil.php"><button class="btn btn-secondary px-1 me-2" type="button">Editar</button></a>
         <a href=""><form action="../../src/controllers/aplicacao/controlar-autenticacao.php" method="post">
           <button class="btn btn-danger px-1" type="submit" name="utilizador" value="logout">Logout</button>
         </form></a>
