@@ -56,7 +56,7 @@ require_once __DIR__ . '/Compunents/header.php';
         <div class="col-lg-4 col p-4">
           <div class="flip-card w-100">
             <div class="flip-card-inner">
-              <div class="flip-card-front-1"></div>
+              <div class="flip-card-front-2"></div>
               <div class="flip-card-back">
                 <h1>Azevinho (Ilex aquifolium)</h1>
               </div>
@@ -83,7 +83,7 @@ require_once __DIR__ . '/Compunents/header.php';
         <div class="col-lg-4 col p-4">
           <div class="flip-card w-100">
             <div class="flip-card-inner">
-              <div class="flip-card-front-1"></div>
+              <div class="flip-card-front-3"></div>
               <div class="flip-card-back">
                 <h1>Carvalheira</h1>
               </div>

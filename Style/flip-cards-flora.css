@@ -32,7 +32,7 @@
   }
 
   .flip-card-front-1 {
-    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-image: url("../recursos/IMG/Flora/1200px-Drosera-rotundifolia.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,7 +40,7 @@
   }
   
   .flip-card-front-2 {
-    background-image: url("../recursos/IMG/Fauna/Águia-de-asa-redonda.jpg");
+    background-image: url("../recursos/IMG/Flora/318b0943ccdf7eef328fab215e5823449901babd235e.jpeg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -48,7 +48,7 @@
   }
 
   .flip-card-front-3 {
-    background-image: url("../recursos/IMG/Fauna/Corujinha-do-Mato.jpg");
+    background-image: url("../recursos/IMG/Flora/trilho_carvalheira_abedim_moncao9.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
