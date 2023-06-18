@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../src/middleware/middleware-utilizador.php';
 
 $titulo = '- Ceia';
-include_once __DIR__ . '/Compunents/header.php';
+require_once __DIR__ . '/Compunents/header.php';
 
 ?>
 
