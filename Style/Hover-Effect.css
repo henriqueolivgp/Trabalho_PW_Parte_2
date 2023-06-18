@@ -1,42 +1,39 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } 
-  
-  .container-card {
-    width: 100%;
+.container-card {
     background: white;
     font-family: 'roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   
-  .cards{
-    width: 90%;
-    height: 70%;
-    border-radius: 2rem;
+  .card-1{
+    background-image: url('../recursos/IMG/PercursosPedestres/PCR2938.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    border-radius: 0.5rem;
     overflow: hidden;
     border: 8px solid #81a05a;
     position: relative;
   }
-  
-  .card-img-1{
 
-    object-fit: cover;
-    border-radius: 1rem;
+  .card-2{
+    background-image: url('../recursos/IMG/PercursosPedestres/Imagem005-2.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-   /* background-position: center;
-    background-repeat: no-repeat;*/
+    height: 500px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 8px solid #81a05a;
+    position: relative;
   }
 
-  .back-img-1{
-    width: 100%;
-    height: 100%;
-  } 
-  
-  .card-body-1{
+  .cards-body{
     width: 100%;
     height: 100%;
     top: 0;
@@ -53,7 +50,11 @@
     transition: 1s;
   }
   
-  .cards:hover:hover .card-body-1{
+  .card-1:hover:hover .card-body-1{
+    right: 0;
+  }
+
+  .card-2:hover:hover .card-body-1{
     right: 0;
   }
   
