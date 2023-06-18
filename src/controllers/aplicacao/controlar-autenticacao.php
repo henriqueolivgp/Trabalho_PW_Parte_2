@@ -71,8 +71,8 @@ function verificaErros($dados, $requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR PARA FORMULÁRIO DE LOGIN INFORMANDO ERROS
-        header('location: /../aplicacao/login.php' . $params);
-
+        header('location: /../APP/Login.php' . $params);
+        
         return false;
     }
 
