@@ -1,9 +1,9 @@
 <?php
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES AUTENTICADOS ACESSEM ESTE SITIO
-require_once('./src/middleware/middleware-utilizador.php');
+require_once('../src/middleware/middleware-utilizador.php');
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
-$titulo = ' - Altarar Palavra Passe';
+$titulo = ' - Alterar Palavra Passe';
 include_once __DIR__ . '/Compunents/header.php';
 
 # ACESSA DE FUNÇÕES AUXILIADORAS. 
@@ -14,6 +14,7 @@ include_once __DIR__ . '/Compunents/header.php';
 $utilizador = utilizador();
 ?>
 
+<<<<<<< HEAD
 <body>
 
   <div id="preloader"></div>
@@ -35,6 +36,30 @@ $utilizador = utilizador();
             echo $_SESSION['sucesso'] . '<br>';
             echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
             unset($_SESSION['sucesso']);
+=======
+<body class="container bg-light">
+  <div class="pt-1 ">
+    <div class="p-5 mb-2 bg-info text-white">
+      <h1>Registo de Utilizadores</h1>
+    </div>
+    <main class="bg-light">
+      <section class="py-4">
+        <a href="/APP/perfil.php"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
+      </section>
+      <section>
+        <?php
+        # MOSTRA AS MENSAGENS DE SUCESSO E DE ERRO VINDA DO CONTROLADOR-UTILIZADOR
+        if (isset($_SESSION['sucesso'])) {
+          echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';
+          echo $_SESSION['sucesso'] . '<br>';
+          echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+          unset($_SESSION['sucesso']);
+        }
+        if (isset($_SESSION['erros'])) {
+          echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+          foreach ($_SESSION['erros'] as $erro) {
+            echo $erro . '<br>';
+>>>>>>> 3ae13796394d0655204f29cdda4c45688012461e
           }
           if (isset($_SESSION['erros'])) {
             echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
