@@ -15,7 +15,7 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
   }
 
   .flip-card:hover .flip-card-inner {
@@ -40,7 +40,7 @@
   }
   
   .flip-card-front-2 {
-    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-image: url("../recursos/IMG/Fauna/Águia-de-asa-redonda.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -48,39 +48,7 @@
   }
 
   .flip-card-front-3 {
-    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .flip-card-front-4 {
-    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .flip-card-front-5 {
-    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .flip-card-front-6 {
-    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .flip-card-front-7 {
-    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-image: url("../recursos/IMG/Fauna/Corujinha-do-Mato.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;

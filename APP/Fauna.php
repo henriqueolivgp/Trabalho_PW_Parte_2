@@ -9,7 +9,7 @@ require_once __DIR__ . '/Compunents/header.php';
 
 <body>
 
-<div id="preloader"></div>
+  <div id="preloader"></div>
 
   <!--Navbar Start here-->
   <?php
@@ -38,7 +38,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
+          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 O lobo-ibérico (Canis lupus signatus) é uma subespécie de lobo nativa da Península Ibérica. São animais
@@ -58,8 +58,18 @@ require_once __DIR__ . '/Compunents/header.php';
 
     <div class="card mb-3 align-items-center">
       <div class="row d-flex align-items-center w-100">
+        <div class=" col-lg-4 col p-4">
+          <div class="flip-card w-100">
+            <div class="flip-card-inner">
+              <div class="flip-card-front-2"></div>
+              <div class="flip-card-back">
+                <h1>Águia de asa redonda<br>(Buteo buteo)</h1>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; ">
+          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 A águia-de-asa-redonda (Buteo buteo), também conhecida como bútio-comum. É uma ave de rapina de porte médio,
@@ -71,17 +81,6 @@ require_once __DIR__ . '/Compunents/header.php';
             </div>
           </div>
         </div>
-        <div class=" col-lg-4 col p-4">
-          <div class="flip-card w-100">
-            <div class="flip-card-inner">
-              <div class="flip-card-front-2"></div>
-              <div class="flip-card-back">
-                <h1>Águia de asa redonda<br>(Buteo buteo)</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -92,7 +91,7 @@ require_once __DIR__ . '/Compunents/header.php';
         <div class=" col-lg-4 col p-4">
           <div class="flip-card w-100">
             <div class="flip-card-inner">
-              <div class="flip-card-fron-3"></div>
+              <div class="flip-card-front-3"></div>
               <div class="flip-card-back">
                 <h1>Coruja do mato (Strix aluco)</h1>
               </div>
@@ -100,7 +99,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
+          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 A coruja-do-mato é uma ave de rapina de dimensão média e aspecto compacto. Possui asas relativamente curtas,
@@ -118,8 +117,18 @@ require_once __DIR__ . '/Compunents/header.php';
 
     <div class="card mb-3 align-items-center">
       <div class="row d-flex align-items-center w-100">
+        <div class=" col-lg-4 col p-4">
+          <div class="flip-card w-100">
+            <div class="flip-card-inner">
+              <div class="flip-card-front-4"></div>
+              <div class="flip-card-back">
+                <h1>Garrano<br>(Equus caballus)</h1>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
+          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 Garrano é uma raça de cavalo nativa do norte de Portugal, conhecida pela sua resistência e adaptabilidade a
@@ -132,17 +141,6 @@ require_once __DIR__ . '/Compunents/header.php';
             </div>
           </div>
         </div>
-        <div class=" col-lg-4 col p-4">
-          <div class="flip-card w-100">
-            <div class="flip-card-inner">
-              <div class="flip-card-front-4"></div>
-              <div class="flip-card-back">
-                <h1>Garrano<br>(Equus caballus)</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -161,7 +159,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
+          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 "Javali-europeu" é o nome comum dado à subespécie Sus scrofa, que é uma das várias subespécies de javali
@@ -178,8 +176,18 @@ require_once __DIR__ . '/Compunents/header.php';
 
     <div class="card mb-3 align-items-center">
       <div class="row d-flex align-items-center w-100">
+        <div class=" col-lg-4 col p-4">
+          <div class="flip-card w-100">
+            <div class="flip-card-inner">
+              <div class="flip-card-front-6"></div>
+              <div class="flip-card-back">
+                <h1>Corço<br>(Capreolus capreolus)</h1>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
+          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 O corço (Capreolus capreolus) é uma espécie de cervo encontrado na Europa, Ásia Ocidental e Ásia Central. É um
@@ -192,17 +200,6 @@ require_once __DIR__ . '/Compunents/header.php';
             </div>
           </div>
         </div>
-        <div class=" col-lg-4 col p-4">
-          <div class="flip-card w-100">
-            <div class="flip-card-inner">
-              <div class="flip-card-front-6"></div>
-              <div class="flip-card-back">
-                <h1>Corço<br>(Capreolus capreolus)</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
 
@@ -221,7 +218,7 @@ require_once __DIR__ . '/Compunents/header.php';
           </div>
         </div>
         <div class="col-lg-8 p-4 d-flex justify-align-center">
-          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 1rem;">
+          <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
             <div class="card-text">
               <p>
                 O noitibó-da-europa (Caprimulgus europaeus) é uma ave noturna encontrada em grande parte da Europa, norte da
