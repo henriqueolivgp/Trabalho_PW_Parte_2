@@ -1,6 +1,6 @@
 .flip-card {
-    margin-top: 2%;
-    margin-left: 10%;
+    /*margin-top: 2%;
+    margin-left: 10%;*/
     background-color: transparent;
 
     height: 300px;
@@ -9,7 +9,7 @@
 
   .flip-card-inner {
     position: relative;
-    width: 28%;
+    /*width: 28%;*/
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
@@ -32,8 +32,59 @@
   }
 
   .flip-card-front-1 {
-    background-image: url("../IMG/Flora/1200px-Drosera-rotundifolia.jpg");
-    background-size: 300px 300px;
+    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .flip-card-front-2 {
+    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .flip-card-front-3 {
+    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .flip-card-front-4 {
+    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .flip-card-front-5 {
+    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .flip-card-front-6 {
+    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .flip-card-front-7 {
+    background-image: url("../recursos/IMG/Fauna/lobo-iberico.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .flip-card-back {
