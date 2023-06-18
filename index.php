@@ -13,6 +13,7 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
 
   <!-- All Styles for -->
   <link rel="stylesheet" href="../../Style/footer.css">
+  <link rel="stylesheet" href="../../Style/preloader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
@@ -23,6 +24,10 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
 </head>
 
 <body>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
   <!--Navbar Start here-->
   <nav style="background-color: #81a05a; height: 60PX;" class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
@@ -86,6 +91,8 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
       </div>
     </div>
   </footer>
+
+  <script src="../../static/js/preloader.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
