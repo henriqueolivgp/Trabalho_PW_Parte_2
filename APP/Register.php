@@ -9,7 +9,7 @@ include_once __DIR__ . '/Compunents/header.php';
 
 <body>
 
-    <div id="preloader"></div>
+<div id="preloader"></div>
 
     <main>
         <!--Navbar Start here-->
