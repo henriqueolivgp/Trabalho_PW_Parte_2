@@ -50,11 +50,11 @@
     transition: 1s;
   }
   
-  .card-1:hover:hover .card-body-1{
+  .card-1:hover:hover .cards-body{
     right: 0;
   }
 
-  .card-2:hover:hover .card-body-1{
+  .card-2:hover:hover .cards-body{
     right: 0;
   }
   
