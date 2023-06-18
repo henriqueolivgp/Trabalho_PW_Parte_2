@@ -30,7 +30,7 @@ require_once __DIR__ . '/Compunents/header.php';
         </div>
       </div>
 
-  <!-- Card-2-->
+    <!-- Card-2-->
     <div class="cards p-4 mt-4">
       <div class="card-img-1"><img class="back-img" src="../recursos/IMG/Percursos Pedestres/Imagem 005-2.jpg" alt=""></div>
       <div class="card-body-1" style="border: 8px; border-radius: 1rem;">
@@ -42,7 +42,7 @@ require_once __DIR__ . '/Compunents/header.php';
       </div>
     </div>
   </div>
-</body>
+
 
   <?php
 
