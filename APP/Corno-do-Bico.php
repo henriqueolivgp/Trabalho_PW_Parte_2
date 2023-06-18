@@ -28,7 +28,7 @@ require_once __DIR__ . '/Compunents/header.php';
             <img src="../recursos/IMG/Fauna/Fauna_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="...">
           </div>
           <div class="col-xl-8 col-lg-7 p-4">
-            <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+            <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
               <h3 class="card-title">Fauna</h3>
               <p class="card-text">No corno do bico encontramos uma fauna diversificada e com isto
                 refiro-me à vida animal e ao seu ambiente ou região. Podemos então
@@ -49,7 +49,7 @@ require_once __DIR__ . '/Compunents/header.php';
             <img src="../recursos/IMG/Flora/Flora_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="...">
           </div>
           <div class="col-xl-8 col-lg-7 p-4">
-            <div class="card-body " style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+            <div class="card-body " style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
               <h3 class="card-title">Flora</h3>
               <p class="card-text">No corno do bico encontramos uma flora diversificada ou seja um
                 conjunto de plantas presentes nesta região ou ecossistema. Podemos
@@ -70,7 +70,7 @@ require_once __DIR__ . '/Compunents/header.php';
             <img src="../recursos/IMG/Astrocamp_Square.png" class="img-fluid rounded-start" style="border-radius: 0.5rem;" alt="...">
           </div>
           <div class="col-xl-8 col-lg-7  p-4">
-            <div class="card-body" style="background-color:#81a05a; border: 8px solid #198754; border-radius: 0.5rem;">
+            <div class="card-body" style="background-color:#81a05a; text-align:justify; border: 8px solid #198754; border-radius: 0.5rem;">
               <h3 class="card-title">Astrocampo</h3>
               <p class="card-text">O AstroCamp é um projeto académico voltado para o estudo da astronomia e física, que oferece
                 aos participantes uma formação de alta qualidade e inspiradora, além de um ambiente tranquilo
