@@ -1,40 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../CSS/Percursos-Pedestres.css">
-  <!--Style link for responsive navbar -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <title>Percursos-Pedestres</title>
-</head>
+require_once __DIR__ . '/../src/middleware/middleware-utilizador.php';
+
+$titulo = ' - Percursos Pedestres';
+require_once __DIR__ . '/Compunents/header.php';
+?>
 
 <body>
 
   <div id="preloader"></div>
   
-  <!--Navbar Start here-->
-  <nav>
-    <input type="checkbox" id="check" />
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <label class="logo"> Vascões</label>
-    <ul>
-      <li><a id="links-button" href="../../../../Index.html">Início</a></li>
-      <li><a id="links-button" href="../../Ceia/html/ceia.html">Ceia</a></li>
-      <li><a id="links-button" href="../../Corno-do-Bico/HTML/Corno-do-Bico.html">Corno do Bico</a></li>
-      <li>
-        <a id="links-button" href="../../Percursos-Pedestres/HTML/Percursos-Pedestres.html">Percursos Pedestres</a>
-      </li>
-      <li><a id="links-button" href="../../Bike-Park/HTML/Bike-Park.html">Mountain Bike</a></li>
-      <li><a id="links-button" href="../../Miradouros/HTML/Miradouros.html">Miradouros</a></li>
-    </ul>
-  </nav>
-  <section class="nav-humburger"></section>
-  <!--Navbar finished here-->
+  <?php
+
+  require_once __DIR__ . '/Compunents/navbar.php';
+
+  ?>
 
   <!-- Card-1-->
   <div class="container">
@@ -69,4 +49,8 @@
   </div>
 </body>
 
-</html>
+  <?php
+
+  require_once __DIR__ . '/Compunents/footer.php';
+
+  ?>
