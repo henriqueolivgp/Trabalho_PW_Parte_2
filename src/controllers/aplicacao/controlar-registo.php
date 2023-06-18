@@ -61,7 +61,7 @@ function registo($requisicao)
 
 
             # DEFINE MENSAGEM DE SUCESSO
-            $_SESSION['sucesso'] = 'Bem-vindo(a) ao nosso sistema. Por vaor, atualize o seu perfil.';
+            $_SESSION['sucesso'] = 'Bem-vindo(a) ao nosso sistema. Por favor, atualize o seu perfil.';
 
             # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
             header('location: /../../../APP/perfil.php');
