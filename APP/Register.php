@@ -8,8 +8,10 @@ include_once __DIR__ . '/Compunents/header.php';
 ?>
 
 <body>
-    <main>
 
+    <div id="preloader"></div>
+
+    <main>
         <!--Navbar Start here-->
         <nav style="background-color: #81a05a; height: 60PX;" class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
