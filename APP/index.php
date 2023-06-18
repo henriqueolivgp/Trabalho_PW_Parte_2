@@ -14,13 +14,16 @@ include_once __DIR__ . '/Compunents/header.php';
 ?>
 
 <body>
-  <?php 
-  
+  <?php
+
   require_once __DIR__ . '/Compunents/navbar.php';
-  
+
   ?>
 
   <!--Navbar finished here-->
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
   <div class="container vh-100 d-flex align-items-center justify-content-center">
 
@@ -60,9 +63,9 @@ include_once __DIR__ . '/Compunents/header.php';
 
   </div>
 
-<!-- Site footer -->
-<?php
+  <!-- Site footer -->
+  <?php
 
-require_once __DIR__ . '/Compunents/footer.php';
+  require_once __DIR__ . '/Compunents/footer.php';
 
-?>
+  ?>
