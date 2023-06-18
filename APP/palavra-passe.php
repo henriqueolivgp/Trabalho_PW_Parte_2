@@ -14,7 +14,6 @@ include_once __DIR__ . '/Compunents/header.php';
 $utilizador = utilizador();
 ?>
 
-<<<<<<< HEAD
 <body>
 
   <div id="preloader"></div>
@@ -36,7 +35,6 @@ $utilizador = utilizador();
             echo $_SESSION['sucesso'] . '<br>';
             echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
             unset($_SESSION['sucesso']);
-=======
 <body class="container bg-light">
   <div class="pt-1 ">
     <div class="p-5 mb-2 bg-info text-white">
@@ -59,7 +57,7 @@ $utilizador = utilizador();
           echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
           foreach ($_SESSION['erros'] as $erro) {
             echo $erro . '<br>';
->>>>>>> 3ae13796394d0655204f29cdda4c45688012461e
+
           }
           if (isset($_SESSION['erros'])) {
             echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
