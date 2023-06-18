@@ -27,9 +27,10 @@
         </li>
       </ul>
       <span class="navbar-text h5">
-        <form action="../../src/controllers/aplicacao/controlar-autenticacao.php" method="post">
-          <button class="btn btn-danger px-1" type="submit" name="utilizador" value="logout">Fazer Logout</button>
-        </form>
+      <a href="caminho_da_pasta/perfil.php"><button class="btn btn-outline-secondary px-1" type="button">Editar</button></a>
+        <a href=""><form action="../../src/controllers/aplicacao/controlar-autenticacao.php" method="post">
+          <button class="btn btn-danger px-1" type="submit" name="utilizador" value="logout">Logout</button>
+        </form></a>
       </span>
     </div>
   </div>
