@@ -9,6 +9,8 @@ require_once __DIR__ . '/Compunents/header.php';
 
 <body>
 
+<div id="preloader"></div>
+
   <!--Navbar Start here-->
   <?php
 

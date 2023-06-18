@@ -17,6 +17,9 @@ require_once __DIR__ . '/Compunents/header.php';
 
 
 <body>
+
+  <div id="preloader"></div>
+
   <div class=" container vh-100 bg-light">
     <div class="pt-1 ">
       <div class="p-5 mb-2 bg-info text-white">
@@ -49,7 +52,7 @@ require_once __DIR__ . '/Compunents/header.php';
           ?>
         </section>
         <section>
-          <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-utilizador.php" method="post" >
+          <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-utilizador.php" method="post">
             <div class="input-group mb-3">
               <span class="input-group-text">Nome</span>
               <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : $utilizador['nome'] ?>" required>
