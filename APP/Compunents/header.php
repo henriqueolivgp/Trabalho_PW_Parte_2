@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="../../Style/footer.css">
   <link rel="stylesheet" type="text/css" href="../../Style/flip-cards.css">
   <link rel="stylesheet" type="text/css" href="../../Style/preloader.css">
+  <link rel="stylesheet" type="text/css" href="../../Style/Hover-Effect.css">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
