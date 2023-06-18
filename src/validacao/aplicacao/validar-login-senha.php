@@ -17,7 +17,7 @@ function validarLogin($requisicao)
 
     # VALIDANDO O CAMPO PALAVRA PASSE
     if (empty($requisicao['palavra_passe']) || strlen($requisicao['palavra_passe']) < 6) {
-        $erros['palavra_passe'] = 'O campo Palavra Passe não pode estar vazio e deve ter no mínio 6 caracteres.';
+        $erros['palavra_passe'] = 'O campo Palavra Passe não pode estar vazio e deve ter no mínimo 6 caracteres.';
     }
 
     # RETORNA ERROS
