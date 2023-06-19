@@ -1,3 +1,9 @@
+<?php 
+
+ require_once __DIR__ . '/../../src/controllers/admin/admin-controler.php'
+
+?>
+
 <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
   <div class="container-fluid">
     <a class="navbar-brand font-weight-bold text-light " href="/APP/index.php">Vascoes</a>
@@ -15,10 +21,10 @@
             <a class="nav-link text-light" aria-current="page" href="/APP/index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="/APP/ceia.php">Ceia</a>
+            <a class="nav-link text-light" href="/APP/ceia.php">CEIA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="/APP/Corno-do-Bico.php">Corno do bico</a>
+            <a class="nav-link text-light" href="/APP/Corno-do-Bico.php">Corno do Bico</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="/APP/Percursos-Pedestres.php">Percursos Pedestres</a>
@@ -30,7 +36,13 @@
             <a class="nav-link text-light" href="/APP/Miradouros.php">Miradouros</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav mb-2 mb-lg-0">
+        <ul class="nav navbar-nav mb-lg-0">
+        <li class="nav-item me-2">
+            <a href="/admin/Admin.php">
+              <button  class="btn btn-warning" type="button">Control Panel</button>
+              <?php # if (!$isAdmin) { echo 'style="display: none;"'; } ?>
+            </a>
+          </li>
           <li class="nav-item">
             <a href="/APP/perfil.php">
               <button class="btn btn-secondary" type="button">Edit Profile</button>
