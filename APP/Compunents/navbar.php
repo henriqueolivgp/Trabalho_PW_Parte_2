@@ -1,8 +1,6 @@
-
-
 <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
   <div class="container-fluid">
-    <a class="navbar-brand font-weight-bold text-light" href="#">Vascoes</a>
+    <a class="navbar-brand font-weight-bold text-light " href="/APP/index.php">Vascoes</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>  
@@ -12,7 +10,7 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div style="background-color: #81a05a;" class="offcanvas-body">
-        <ul class="navbar-nav justify-content-start flex-grow-1  ">
+        <ul class="navbar-nav justify-content-start flex-grow-1 h5 ">
           <li class="nav-item">
             <a class="nav-link text-light" aria-current="page" href="/APP/index.php">Home</a>
           </li>
