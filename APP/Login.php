@@ -12,17 +12,24 @@ include_once __DIR__ . '/Compunents/header.php';
 <div id="preloader"></div>
 
   <!--Navbar Start here-->
-  <nav style="background-color: #81a05a; height: 60PX;" class="navbar navbar-expand-lg navbar-dark">
+  <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
     <div class="container-fluid">
-      <a class="navbar-brand font-weight-bold " href="/index.php">Vascoes</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand font-weight-bold text-light" href="/index.php">Vascoes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        </ul>
-        <span class="navbar-text h5 ml-auto">
-          <a style="text-decoration: none;" href="/APP/Register.php">Register</a> <a style="text-decoration: none;" href="/APP/Login.php">/ login</a>
-        </span>
+      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div style="background-color: #81a05a;" class="offcanvas-header text-light">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Vascoes</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div style="background-color: #81a05a;" class="offcanvas-body">
+          <ul class="nav navbar-nav mb-2 mb-lg-0 h5 ml-auto">
+            <li class="nav-item">
+              <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ login</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
