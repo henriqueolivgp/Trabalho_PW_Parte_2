@@ -14,7 +14,7 @@
     background-position: center;
     background-size: cover;
     height: 500px;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     overflow: hidden;
     border: 8px solid #81a05a;
     position: relative;
@@ -27,7 +27,33 @@
     background-position: center;
     background-size: cover;
     height: 500px;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 8px solid #81a05a;
+    position: relative;
+  }
+
+  .card-3{
+    background-image: url('../recursos/IMG/Bike-Park/604908bb6b75c.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 8px solid #81a05a;
+    position: relative;
+  }
+
+  .card-4{
+    background-image: url('../recursos/IMG/MIRADOURO_DO_ALTO_DO_CRASTO_1220X451.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    border-radius: 1rem;
     overflow: hidden;
     border: 8px solid #81a05a;
     position: relative;
@@ -41,7 +67,7 @@
     position: absolute;
     background: #1f3d4738;
     backdrop-filter: blur(5px);
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
     color: #fff;
     padding: 30px;
     display: flex;
@@ -55,6 +81,14 @@
   }
 
   .card-2:hover:hover .cards-body{
+    right: 0;
+  }
+
+  .card-3:hover:hover .cards-body{
+    right: 0;
+  }
+
+  .card-4:hover:hover .cards-body{
     right: 0;
   }
   
