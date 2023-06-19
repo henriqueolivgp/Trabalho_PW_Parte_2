@@ -39,8 +39,8 @@
         <ul class="nav navbar-nav mb-lg-0">
         <li class="nav-item me-2">
             <a href="/admin/Admin.php">
-              <button  class="btn btn-warning" type="button">Control Panel</button>
-              <?php # if (!$isAdmin) { echo 'style="display: none;"'; } ?>
+              <button <?php  if ($isAdmin ? true : false) { echo 'style="display: none;"'; } ?>  class="btn btn-warning" type="button">Control Panel</button>
+              
             </a>
           </li>
           <li class="nav-item">

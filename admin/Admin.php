@@ -19,6 +19,8 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
 
 <body>
 
+    <div id="preloader"></div>
+
     <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
         <div class="container-fluid">
             <a class="navbar-brand font-weight-bold text-light" href="/APP/index.php">Vascoes</a>
@@ -37,7 +39,7 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
                                 <button class="btn btn-warning" type="button">Back</button>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item me-2">
                             <a href="/APP/perfil.php">
                                 <button class="btn btn-secondary" type="button">Edit Profile</button>
                             </a>
@@ -54,72 +56,58 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
     </nav>
 
     <div class="p-4 mb-2 text-dark">
-        <h1 class="text-center">O "<?= $utilizador['nome'] ?? null ?>" acedeu ao painel <br> de controlo</h1>
+        <h1 class="text-center">O admin "<?= $utilizador['nome'] ?? null ?>" acedeu ao painel <br> de controlo</h1>
     </div>
 
     <div class="container mt-4 mb-4 d-flex vw-100">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="card me-4 " style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title">Editar Utilizadores</h5>
+                    <p class="card-text">Aqui o administrador podera editar os usuarios</p>
+                    <a href="/admin/EditarUsers.php" class="card-link text-decoration-none">Edit</a>
                 </div>
             </div>
             <div class="card me-4 col-3  col-lg-4" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title">Manage Users</h5>
+                    <p class="card-text">Aqui o administrador podera ver todos os usuarios e inserir, atualizar, apagar os mesmos</p>
+                    <a href="#" class="card-link text-decoration-none">Click Here</a>
+                </div>
+            </div>
+            <div class="card me-4 " style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">CEIA Page</h5>
+                    <p class="card-text">O administrador aqui podera fazer a insercao, atualizacao, apagar todas as informacoes</p>
+                    <a href="#" class="card-link text-decoration-none">Card link</a>
                 </div>
             </div>
             <div class="card me-4 " style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card me-4 " style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <a href="#" class="card-link text-decoration-none">Card link</a>
                 </div>
             </div>
             <div class="card me-4 mt-4" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <a href="#" class="card-lin text-decoration-none">Card link</a>
                 </div>
             </div>
             <div class="card me-4 mt-4" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <a href="#" class="card-link text-decoration-none">Card link</a>
                 </div>
             </div>
             <div class="card me-4 mt-4" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <a href="#" class="card-link text-decoration-none">Card link</a>
                 </div>
             </div>
         </div>

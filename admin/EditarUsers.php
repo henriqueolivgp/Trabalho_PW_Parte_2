@@ -12,6 +12,8 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
 
 <body>
 
+  <div id="preloader"></div>
+
   <div class="p-5 mb-2 bg-info text-white">
     <h1>Editar Utilizadores</h1>
   </div>
@@ -19,7 +21,7 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
   <div class="container">
     <main class="bg-light">
       <section class="py-4">
-        <a href="/admin/"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
+        <a href="/admin/Admin.php"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
       </section>
       <section>
         <?php
@@ -41,7 +43,7 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
         ?>
       </section>
       <section class="pb-4">
-        <form enctype="multipart/form-data" action="/src/controlador/admin/controlar-utilizador.php" method="post" >
+        <form enctype="multipart/form-data" action="/src/controlador/admin/controlar-utilizador.php" method="post">
           <div class="input-group mb-3">
             <span class="input-group-text">Nome</span>
             <input type="text" class="form-control" name="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
@@ -89,5 +91,5 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
 
   <?php
   # CARREGA O RODAPE PADRÃO
-  require_once __DIR__ . '/templates/rodape.php';
+  require_once __DIR__ . '/../APP/Compunents/footer.php';
   ?>
