@@ -6,9 +6,13 @@ require_once __DIR__ . '/../../src/infrastructure/bd/user.php';
 
 require_once __DIR__ . '/../../APP/Compunents/header.php';
 
+$titulo = ' - Gerir Utilizadores';
+require_once __DIR__ . '/../../APP/Compunents/header.php';
 ?>
 
 <body>
+
+    <div id="preloader"></div>
 
     <?php
 
@@ -16,7 +20,7 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
 
     ?>
 
-    <h1 class="text-center p-2">Gerenciar Usuários</h1>
+    <h1 class="text-center p-2">Gerir Utilizadores</h1>
 
     <div class="container d-flex flex-column bg-light">
         <div class="content">
