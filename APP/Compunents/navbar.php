@@ -2,7 +2,6 @@
 
 require_once __DIR__ . '/../../src/controllers/admin/admin-controler.php';
 
-
 ?>
 
 <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
@@ -41,7 +40,6 @@ require_once __DIR__ . '/../../src/controllers/admin/admin-controler.php';
         <li class="nav-item me-2">
             <a href="/admin/Admin.php">
               <button <?php  if ($isAdmin ? true : false) { echo 'style="display: none;"'; } ?>  class="btn btn-warning" type="button">Control Panel</button>
-              
             </a>
           </li>
           <li class="nav-item">

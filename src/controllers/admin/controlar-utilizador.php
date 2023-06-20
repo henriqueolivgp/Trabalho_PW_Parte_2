@@ -63,7 +63,7 @@ if (isset($_GET['utilizador'])) {
         # ENVIA PARÂMETROS COM DADOS DO UTILIZADOR PARA A PÁGINA UTILIZADOR RECUPERAR DADOS PARA MANIPULAR A ALTERAÇÃO
         $params = '?' . http_build_query($utilizador);
 
-        header('location: /../admin/utilizador.php' . $params);
+        header('location: /../../../admin/Users/EditarUsers.php' . $params);
     }
 
     ## CONTROLA A ROTA PARA A EXCLUSÃO DE UTILIZADORES
@@ -94,7 +94,8 @@ if (isset($_GET['utilizador'])) {
             $_SESSION['sucesso'] = 'Utilizador deletado com sucesso!';
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /../admin/');
+            header('location: /../../../admin/Users/AllUsers.php');
+
         }
     }
 }
@@ -165,7 +166,7 @@ function atualizar($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../admin/utilizador.php' . $params);
+        header('location: /../../../admin/Users/EditarUsers.php' . $params);
 
         return false;
     }
@@ -206,7 +207,7 @@ function atualizar($requisicao)
         $params = '?' . http_build_query($dados);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../admin/utilizador.php' . $params);
+        header('location: /../../../admin/Users/EditarUsers.php' . $params);
     }
 }
 
@@ -319,6 +320,7 @@ function deletar($utilizador)
 
     # RETORNA RESULTADO DO BANCO DE DADOS
     return $retorno;
+    
 }
 
 /**
@@ -342,7 +344,7 @@ function guardaFoto($dados, $fotoAntiga = null)
     $novoNome = uniqid('foto_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/../../../recursos/imagens/uploads/';
+    $caminhoFicheiro = __DIR__ . '/../../../recursos/user-image';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;
