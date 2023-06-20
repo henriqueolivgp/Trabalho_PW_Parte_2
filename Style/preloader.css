@@ -1,7 +1,7 @@
 #preloader{
   background: #ffff url(../recursos/preloader/Spinner-3.gif) no-repeat center center;
   
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: fixed;
   z-index: 100;
