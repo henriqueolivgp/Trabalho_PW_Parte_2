@@ -31,7 +31,7 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
   <!--Navbar Start here-->
   <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
     <div class="container-fluid">
-      <a class="navbar-brand font-weight-bold text-light" href="/index.php">Vascoes</a>
+      <a class="navbar-brand font-weight-bold text-light" href="/index.php">Vascões</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
