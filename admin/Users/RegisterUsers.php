@@ -3,11 +3,11 @@
 # PARA ISSO FUNCIONAR, EXISTE UM TRATAMENTO VIA GET/REQUEST ALTERANDO O VALOR DO BOTÃO DE NOME name="utilizador" 
 
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES ACESSE O SITIO
-require_once __DIR__ . '/../src/middleware/middleware-administrador.php';
+require_once __DIR__ . '/../../src/middleware/middleware-administrador.php';
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = ' - Edit Users';
-require_once __DIR__ . '/../APP/Compunents/header.php';
+require_once __DIR__ . '/../../APP/Compunents/header.php';
 ?>
 
 <body>
@@ -15,7 +15,7 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
   <div id="preloader"></div>
 
   <div class="p-5 mb-2 bg-info text-white">
-    <h1>Editar Utilizadores</h1>
+    <h1>Registar Utilizadores</h1>
   </div>
 
   <div class="container">
@@ -43,7 +43,7 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
         ?>
       </section>
       <section class="pb-4">
-        <form enctype="multipart/form-data" action="/src/controlador/admin/controlar-utilizador.php" method="post">
+        <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-utilizador.php" method="post">
           <div class="input-group mb-3">
             <span class="input-group-text">Nome</span>
             <input type="text" class="form-control" name="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
@@ -91,5 +91,5 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
 
   <?php
   # CARREGA O RODAPE PADRÃO
-  require_once __DIR__ . '/../APP/Compunents/footer.php';
+  require_once __DIR__ . '/../../APP/Compunents/footer.php';
   ?>

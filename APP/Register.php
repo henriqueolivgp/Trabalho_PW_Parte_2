@@ -11,31 +11,31 @@ include_once __DIR__ . '/Compunents/header.php';
 
     <div id="preloader"></div>
 
-    <main>
-        <!--Navbar Start here-->
-        <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
-            <div class="container-fluid">
-                <a class="navbar-brand font-weight-bold text-light" href="/index.php">Vascoes</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div style="background-color: #81a05a;" class="offcanvas-header text-light">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Vascoes</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div style="background-color: #81a05a;" class="offcanvas-body">
-                        <ul class="nav navbar-nav mb-2 mb-lg-0 h5 ml-auto">
-                            <li class="nav-item">
-                                <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ login</a>
-                            </li>
-                        </ul>
-                    </div>
+    <!--Navbar Start here-->
+    <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
+        <div class="container-fluid">
+            <a class="navbar-brand font-weight-bold text-light" href="/index.php">Vascoes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div style="background-color: #81a05a;" class="offcanvas-header text-light">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Vascoes</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div style="background-color: #81a05a;" class="offcanvas-body">
+                    <ul class="nav navbar-nav mb-2 mb-lg-0 h5 ml-auto">
+                        <li class="nav-item">
+                            <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ login</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <div class="container vh-100 d-flex align-items-center justify-content-center text-center bg-light">
+    <div class="container  d-flex flex-column ">
+        <div class="content d-flex align-items-center justify-content-center text-center bg-light">
             <div class="w-75">
                 <section>
                     <?php
@@ -79,7 +79,7 @@ include_once __DIR__ . '/Compunents/header.php';
                 <a href="/index.php"><button class="w-100 btn btn-lg btn-info">Voltar</button></a>
             </div>
         </div>
-    </main>
+    </div>
     <?php
     include_once __DIR__ . '/Compunents/footer.php';
     ?>

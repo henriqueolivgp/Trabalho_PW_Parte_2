@@ -121,7 +121,8 @@ function criar($requisicao)
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../admin/utilizador.php' . $params);
+        header('location: /../../../admin/Users/RegisterUsers.php' . $params);
+
 
         return false;
     }
@@ -139,7 +140,7 @@ function criar($requisicao)
         $_SESSION['sucesso'] = 'Utilizador criado com sucesso!';
 
         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
-        header('location: /../admin/');
+        header('location: /../../../admin/Users/RegisterUsers.php');
     }
 }
 

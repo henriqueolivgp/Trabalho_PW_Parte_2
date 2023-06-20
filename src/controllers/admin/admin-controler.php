@@ -18,8 +18,6 @@ if (administrador() == true) {
     # Deixa ver o botao de painel de controlo
     $isAdmin = $row["administrador"] == 1;
 }else{
+    # Não deixa ver o botao de painel de controlo
     $isAdmin = $row["administrador"] == 0;
 }
-
-
-
