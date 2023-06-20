@@ -81,14 +81,6 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
                     <a href="/admin/Miradouros/MiradourosPage.php" class="card-link text-decoration-none">Atualizar/Apagar</a>
                 </div>
             </div>
-            <div class="card me-4 mt-4" style="width: 18rem; text-align:justify;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link text-decoration-none">Inserir</a>
-                    <a href="#" class="card-link text-decoration-none">Atualizar/Apagar</a>
-                </div>
-            </div>
         </div>
 
     </div>

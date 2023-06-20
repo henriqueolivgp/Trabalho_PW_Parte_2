@@ -4,8 +4,6 @@ require_once __DIR__ . '/../../src/middleware/middleware-administrador.php';
 
 require_once __DIR__ . '/../../src/infrastructure/bd/user.php';
 
-require_once __DIR__ . '/../../APP/Compunents/header.php';
-
 $titulo = ' - Gerir Utilizadores';
 require_once __DIR__ . '/../../APP/Compunents/header.php';
 ?>

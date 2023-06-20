@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../../src/middleware/middleware-utilizador.php';
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
-$titulo = ' - Editar-Utilizador';
+$titulo = ' - Editar Utilizador';
 //include_once __DIR__ . '/templates/cabecalho.php';
 
 # ACESSA DE FUNÇÕES AUXILIADORAS. 
