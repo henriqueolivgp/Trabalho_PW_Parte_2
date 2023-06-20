@@ -6,7 +6,7 @@
 require_once __DIR__ . '/../../src/middleware/middleware-administrador.php';
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
-$titulo = ' - Edit Users';
+$titulo = ' - Registar utilizadores';
 require_once __DIR__ . '/../../APP/Compunents/header.php';
 ?>
 
