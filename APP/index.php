@@ -22,7 +22,7 @@ include_once __DIR__ . '/Compunents/header.php';
 
   <!--Navbar finished here-->
   
-  <h1 class="d-flex h justify-content-center text-center p-4">Bem, "<?= $utilizador['nome'] ?? null ?>" Vindo á Aldeia de vascões</h1>
+  <h1 class="d-flex h justify-content-center text-center p-4">Bem, "<?= $utilizador['nome'] ?? null ?>" Vindo à Aldeia de vascões</h1>
 
   <!-- Preloader -->
   <div id="preloader"></div>

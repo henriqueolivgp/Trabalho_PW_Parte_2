@@ -1,7 +1,18 @@
 <?php
-session_start();
 # INICIALIZA O REPOSITÓRIO PDO UTILIZADOR PARA 
 require_once __DIR__ . '/../infrastructure/bd/user.php';
+
+/*
+    Função responsavel por ver se a sessão foi iniciada ou não,
+    se não foi iniciada inicia 
+*/
+function iniciarSessao()
+{
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+}
+
 
 /**
  * FUNÇÃO PARA INFORMAR SE UTILIZADO ESTÁ AUTENTICADO
