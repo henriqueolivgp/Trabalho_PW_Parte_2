@@ -9,7 +9,7 @@ include_once __DIR__ . '/Compunents/header.php';
 
 <body>
 
-<div id="preloader"></div>
+  <div id="preloader"></div>
 
   <!--Navbar Start here-->
   <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
@@ -34,44 +34,47 @@ include_once __DIR__ . '/Compunents/header.php';
     </div>
   </nav>
 
-  <div class="d-flex align-items-center justify-content-center text-center bg-light">
-    <div class="w-75">
-      <main>
-        <section>
-          <?php
-          # MOSTRA AS MENSAGENS DE ERRO CASO LOGIN SEJA INVÁLIDO
-          if (isset($_SESSION['erros'])) {
-            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
-            foreach ($_SESSION['erros'] as $erro) {
-              echo $erro . '<br>';
+  <div class="container d-flex flex-column">
+    <div class="content d-flex align-items-center justify-content-center text-center bg-light">
+      <div class="w-75">
+        <main>
+          <section>
+            <?php
+            # MOSTRA AS MENSAGENS DE ERRO CASO LOGIN SEJA INVÁLIDO
+            if (isset($_SESSION['erros'])) {
+              echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+              foreach ($_SESSION['erros'] as $erro) {
+                echo $erro . '<br>';
+              }
+              echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+              unset($_SESSION['erros']);
             }
-            echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-            unset($_SESSION['erros']);
-          }
-          ?>
-        </section>
-        <form action="/src/controllers/aplicacao/controlar-autenticacao.php" method="post">
-          <h1 class="h3 mb-3 fw-normal">CRUD PHP</h1>
-          <div class="form-floating mb-2">
-            <input type="email" class="form-control" id="Email" placeholder="Email" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>">
-            <label for="Email">Endereço de Email</label>
-          </div>
-          <div class="form-floating mb-2">
-            <input type="password" class="form-control" id="palavra_passe" placeholder="Palavra Passe" name="palavra_passe" maxlength="255" value="<?= isset($_REQUEST['palavra_passe']) ? $_REQUEST['palavra_passe'] : null ?>">
-            <label for="palavra_passe">Palavra Passe</label>
-          </div>
-          <div class="checkbox mb-3">
-            <label><input type="checkbox" value="lembra-me">Lembrar-me</label>
-          </div>
-          <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="utilizador" value="login">Entrar</button>
-        </form>
-        <a href="/"><button class="w-100 btn btn-lg btn-info">Voltar</button></a>
-      </main>
+            ?>
+          </section>
+          <form action="/src/controllers/aplicacao/controlar-autenticacao.php" method="post">
+            <h1 class="h3 mb-3 fw-normal">CRUD PHP</h1>
+            <div class="form-floating mb-2">
+              <input type="email" class="form-control" id="Email" placeholder="Email" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>">
+              <label for="Email">Endereço de Email</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="password" class="form-control" id="palavra_passe" placeholder="Palavra Passe" name="palavra_passe" maxlength="255" value="<?= isset($_REQUEST['palavra_passe']) ? $_REQUEST['palavra_passe'] : null ?>">
+              <label for="palavra_passe">Palavra Passe</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label><input type="checkbox" value="lembra-me">Lembrar-me</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="utilizador" value="login">Entrar</button>
+          </form>
+          <a href="/"><button class="w-100 btn btn-lg btn-info">Voltar</button></a>
+        </main>
+      </div>
     </div>
+
   </div>
 
   <!-- Site footer -->
-  <footer class="site-footer">
+  <footer class="site-footer footer">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6">
@@ -101,17 +104,15 @@ include_once __DIR__ . '/Compunents/header.php';
   </footer>
 
   <script>
-
     var loader = document.getElementById("preloader");
 
-    window.addEventListener("load", function(){
+    window.addEventListener("load", function() {
       loader.style.display = "none";
     })
-
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-  </body>
+</body>
 
-  </html>
+</html>

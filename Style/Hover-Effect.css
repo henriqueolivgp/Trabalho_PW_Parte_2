@@ -1,113 +1,121 @@
 .container-card {
-    background: white;
-    font-family: 'roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  background: white;
+  font-family: "roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  
-  .card-1{
-    background-image: url('../recursos/IMG/PercursosPedestres/PCR2938.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    border-radius: 1rem;
-    overflow: hidden;
-    border: 8px solid #81a05a;
-    position: relative;
-  }
+.card-1 {
+  background-image: url("../recursos/IMG/PercursosPedestres/PCR2938.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 8px solid #81a05a;
+  position: relative;
+}
 
-  .card-2{
-    background-image: url('../recursos/IMG/PercursosPedestres/Imagem005-2.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    border-radius: 1rem;
-    overflow: hidden;
-    border: 8px solid #81a05a;
-    position: relative;
-  }
+.card-2 {
+  background-image: url("../recursos/IMG/PercursosPedestres/Imagem005-2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 8px solid #81a05a;
+  position: relative;
+}
 
-  .card-3{
-    background-image: url('../recursos/IMG/Bike-Park/604908bb6b75c.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    border-radius: 1rem;
-    overflow: hidden;
-    border: 8px solid #81a05a;
-    position: relative;
-  }
+.card-3 {
+  background-image: url("../recursos/IMG/Bike-Park/604908bb6b75c.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 8px solid #81a05a;
+  position: relative;
+}
 
-  .card-4{
-    background-image: url('../recursos/IMG/MIRADOURO_DO_ALTO_DO_CRASTO_1220X451.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    border-radius: 1rem;
-    overflow: hidden;
-    border: 8px solid #81a05a;
-    position: relative;
-  }
+.card-4 {
+  background-image: url("../recursos/IMG/MIRADOURO_DO_ALTO_DO_CRASTO_1220X451.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 8px solid #81a05a;
+  position: relative;
+}
 
-  .cards-body{
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: -100%;
-    position: absolute;
-    background: #1f3d4738;
-    backdrop-filter: blur(5px);
-    border-radius: 0.5rem;
-    color: #fff;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-  }
-  
-  .card-1:hover:hover .cards-body{
-    right: 0;
-  }
+.cards-body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  border-radius: 0.5rem;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1s;
+}
 
-  .card-2:hover:hover .cards-body{
-    right: 0;
-  }
+.card-1:hover:hover .cards-body {
+  right: 0;
+}
 
-  .card-3:hover:hover .cards-body{
-    right: 0;
-  }
+.card-2:hover:hover .cards-body {
+  right: 0;
+}
 
-  .card-4:hover:hover .cards-body{
-    right: 0;
+.card-3:hover:hover .cards-body {
+  right: 0;
+}
+
+.card-4:hover:hover .cards-body {
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  /* Estilos para dispositivos móveis */
+
+  .cards-body {
+    overflow-y: auto;
+/* Altura máxima para exibir uma barra de rolagem */
   }
-  
-  .card-title-1{
-    text-transform: uppercase;
-    font-size: 50px;
-    font-weight: 500;
-  }
-  
-  .card-sub-title-1{
-    text-transform: capitalize;
-    font-size: 14px;
-    font-weight: 300;
-  }
-  
-  .card-info-1{
-    font-size: 16px;
-    line-height: 25px;
-    margin: 40px 0;
-    font-weight: 400;
-    text-align: justify;
-  }
+}
+
+.card-title-1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.card-sub-title-1 {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.card-info-1 {
+  font-size: 16px;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+  text-align: justify;
+}
