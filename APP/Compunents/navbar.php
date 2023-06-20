@@ -1,6 +1,7 @@
 <?php 
 
- require_once __DIR__ . '/../../src/controllers/admin/admin-controler.php'
+require_once __DIR__ . '/../../src/controllers/admin/admin-controler.php';
+
 
 ?>
 

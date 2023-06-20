@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/../../auxiliadores/auxiliador.php';
+
 /**
  * FICHEIRO RESPONSÁVEL PARA GARANTIR QUE UMA PÁGINA SEJA ACESSÍVEL
  * APENAS POR UM ADMINISTRADOR
@@ -8,16 +10,18 @@
  * QUE DEVERÁ SER PROTEGIDA
  */
 
-# CARREGA AUXILIADOR
-require_once __DIR__ . '/../../auxiliadores/auxiliador.php';
-
 $isAdmin = false;
 
+# PROVENIENTE DE FUNÇÕES AUXILIADORAS. CARREGA O UTILIZADOR ATUAL
+
+$utilizador = utilizador();
+
 # SE UTILIZADOR NÃO TIVER SESSÃO INICIADA, ENVIA PARA TELA DE LOGIN
-if (administrador() == true) {
+if (administrador()) {
+
     # Deixa ver o botao de painel de controlo
-    $isAdmin = $row["administrador"] == 1;
-}else{
+    $isAdmin = $utilizador == ["administrador"];
+} else {
     # Não deixa ver o botao de painel de controlo
-    $isAdmin = $row["administrador"] == 0;
+    $isAdmin = $utilizador != ["administrador"];
 }
