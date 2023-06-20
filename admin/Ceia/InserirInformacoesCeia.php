@@ -24,9 +24,9 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
         <h1 class="text-center">Inserir Informações</h1>
     </div>
 
-    <div class="container d-flex flex-column">
-        <div class="content">
-            <main class="bg-light">
+    <div class="container d-flex flex-column bg-light">
+        <div class="content h-100">
+            <main class="">
                 <section class="py-4">
                     <a href="/admin/Admin.php"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
                 </section>

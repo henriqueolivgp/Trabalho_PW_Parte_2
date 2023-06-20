@@ -85,3 +85,18 @@ $sucesso = $PDOStatement->execute([
 ]);
 
 echo 'Utilizador padrão criado!';
+
+# CRIA A TABELA UTILIZADORES
+$pdo->exec(
+    'CREATE TABLE ceia (
+    id INTEGER PRIMARY KEY, 
+    titulo CHAR, 
+    texto CHAR, 
+    nif CHAR, 
+    telemovel CHAR, 
+    email CHAR NOT NULL, 
+    foto CHAR NULL, 
+    administrador CHAR, 
+    dono CHAR,
+    palavra_passe CHAR);'
+);
