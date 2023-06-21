@@ -12,6 +12,8 @@ require_once __DIR__ . '/../src/middleware/middleware-administrador.php';
 # PROVENIENTE DE FUNÇÕES AUXILIADORAS. CARREGA O UTILIZADOR ATUAL
 $utilizador = utilizador();
 
+
+
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = ' - Utilizador';
 require_once __DIR__ . '/../APP/Compunents/header.php';
@@ -46,7 +48,7 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
                     <h5 class="card-title">CEIA Page</h5>
                     <p class="card-text">Aqui, o administrador pode inserir, atualizar ou apagar todas as informações.</p>
                     <a href="/admin/Ceia/InserirInformacoesCeia.php" class="card-link text-decoration-none">Inserir</a>
-                    <a href="/admin/Ceia/CeiaPage.php" class="card-link text-decoration-none">Atualizar/Apagar</a>
+                    <a href="/admin/Ceia/All-Ceia.php" class="card-link text-decoration-none">Atualizar/Apagar</a>
                 </div>
             </div>
             <div class="card me-4 mt-4" style="width: 18rem; text-align:justify;">

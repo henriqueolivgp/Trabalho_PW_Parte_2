@@ -23,7 +23,7 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
     </div>
 
     <div class="container d-flex flex-column bg-light">
-        <div class="content h-100">
+        <div class="content">
             <main class="">
                 <section class="py-4">
                     <a href="/admin/Admin.php"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
@@ -48,45 +48,28 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
                     ?>
                 </section>
                 <section class="pb-4">
-                    <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-utilizador.php" method="post">
+                    <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-ceia.php" method="post">
                         <div class="input-group mb-3">
-                            <span class="input-group-text">Nome</span>
-                            <input type="text" class="form-control" name="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Apelido</span>
-                            <input type="text" class="form-control" name="apelido" maxlength="100" size="100" value="<?= isset($_REQUEST['apelido']) ? $_REQUEST['apelido'] : null ?>" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">NIF</span>
-                            <input type="tel" class="form-control" name="nif" maxlength="9" size="9" value="<?= isset($_REQUEST['nif']) ? $_REQUEST['nif'] : null ?>" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Telemóvel</span>
-                            <input type="tel" class="form-control" name="telemovel" maxlength="9" value="<?= isset($_REQUEST['telemovel']) ? $_REQUEST['telemovel'] : null ?>" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">E-mail</span>
-                            <input type="email" class="form-control" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text" for="inputGroupFile01">Foto de Perfil</label>
+                            <label class="input-group-text" for="inputGroupFile01">Imagem</label>
                             <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
                         </div>
                         <div class="input-group mb-3">
-                            <span class="input-group-text">Palavra Passe</span>
-                            <input type="password" class="form-control" name="palavra_passe" maxlength="255">
+                            <span class="input-group-text">Titulo</span>
+                            <input type="text" class="form-control" name="titulo" maxlength="100" size="100" value="<?= isset($_REQUEST['titulo']) ? $_REQUEST['titulo'] : null ?>" required>
                         </div>
                         <div class="input-group mb-3">
-                            <div class="form-check form-switch mb-3">
-                                <input class="form-check-input" type="checkbox" name="administrador" role="switch" id="flexSwitchCheckChecked" <?= isset($_REQUEST['administrador']) && $_REQUEST['administrador'] == true ? 'checked' : null ?>>
-                                <label class="form-check-label" for="flexSwitchCheckChecked">Administrador</label>
-                            </div>
+                            <span class="input-group-text">Texto</span>
+                            <input type="text" class="form-control" name="texto" maxlength="400" size="400" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : null ?>" required>
                         </div>
-                        <div class="d-grid col-4 mx-auto">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Links</span>
+                            <input type="text" class="form-control" name="links" maxlength="400" size="400" value="<?= isset($_REQUEST['links']) ? $_REQUEST['links'] : null ?>" >
+                        </div>
+                        </div>
+                        <div class="d-grid col-4 mx-auto mb-5">
                             <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
                             <input type="hidden" name="foto" value="<?= isset($_REQUEST['foto']) ? $_REQUEST['foto'] : null ?>">
-                            <button type="submit" class="btn btn-success" name="utilizador" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Enviar</button>
+                            <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="info" value="criar" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Inserir</button>
                         </div>
                     </form>
                 </section>
