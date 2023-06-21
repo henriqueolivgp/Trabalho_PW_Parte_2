@@ -48,7 +48,7 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
                                 <td><?php echo $info['texto']; ?></td>
                                 <td><?php echo $info['link']; ?></td>
                                 <td>
-                                    <a href="../../src/controllers/admin/controlar-ceia.php 'info=atualizar&id=' . $info['id'] ?>"><button type="button" class="btn btn-info">Editar</button></a>
+                                    <a href="../../src/controllers/admin/controlar-ceia.php?<?= 'info=atualizar&id=' . $info['id'] ?>"><button type="button" class="btn btn-info">Editar</button></a>
                                     <a href="../../src/controllers/admin/controlar-ceia.php?<?= 'info=deletar&id=' . $info['id'] ?>"><button class="btn btn-danger" type="submit">Excluir</button></a>
                                 </td>
                             </tr>
