@@ -112,16 +112,17 @@ function lerinfo($id)
 function lerCeia()
 {
     # PREPARA A QUERY
-    $PDOStatement = $GLOBALS['pdo']->prepare('SELECT * FROM ceia;');
+    $PDOStatement = $GLOBALS['pdo']->query('SELECT * FROM ceia;');
 
-    $Infoceia = [] ;
+    # INICIA ARRAY DE UTILIZADORES
+    $info = [];
 
     # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
-    while ($listaceia = $PDOStatement->fetch()) {
-        $Infoceia[] = $listaceia;
+    while ($listaDeInfos = $PDOStatement->fetch()) {
+        $info[] = $listaDeInfos;
     }
-    # RETORNA OS DADOS
-    return $Infoceia;
+    # RETORNA UTLIZADORES
+    return $info;
 }
 
 function AtualizarInfo($info)

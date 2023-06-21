@@ -6,6 +6,8 @@ require_once __DIR__ . '/../../src/infrastructure/bd/user.php';
 
 $titulo = ' - Gerir Info Ceia';
 require_once __DIR__ . '/../../APP/Compunents/header.php';
+
+$Infoceia = lerCeia();
 ?>
 
 <body>
@@ -37,7 +39,7 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
                     </thead>
                     <tbody>
                         <?php
-                        $Infoceia = lerCeia();
+                        
 
                         foreach ($Infoceia as $info) {
                         ?>
