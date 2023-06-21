@@ -176,4 +176,4 @@ $sqlCreate = "INSERT INTO
         :categoria
     )";
 
-
+# Tabela geral para as tres ultimas paginas
