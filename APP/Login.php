@@ -14,19 +14,19 @@ include_once __DIR__ . '/Compunents/header.php';
   <!--Navbar Start here-->
   <nav style="background-color: #81a05a; height: 65PX;" class="navbar navbar-expand-lg navbar-#81a05a ">
     <div class="container-fluid">
-      <a class="navbar-brand font-weight-bold text-light" href="/index.php">Vascoes</a>
+      <a class="navbar-brand font-weight-bold text-light" href="/index.php">Vascões</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div style="background-color: #81a05a;" class="offcanvas-header text-light">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Vascoes</h5>
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Vascões</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div style="background-color: #81a05a;" class="offcanvas-body">
           <ul class="nav navbar-nav mb-2 mb-lg-0 h5 ml-auto">
             <li class="nav-item">
-              <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ login</a>
+              <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ Login</a>
             </li>
           </ul>
         </div>
@@ -52,7 +52,7 @@ include_once __DIR__ . '/Compunents/header.php';
             ?>
           </section>
           <form action="/src/controllers/aplicacao/controlar-autenticacao.php" method="post">
-            <h1 class="h3 mb-3 fw-normal">CRUD PHP</h1>
+            <h1 class="h3 mb-3 fw-normal">Login</h1>
             <div class="form-floating mb-2">
               <input type="email" class="form-control" id="Email" placeholder="Email" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>">
               <label for="Email">Endereço de Email</label>
@@ -62,7 +62,7 @@ include_once __DIR__ . '/Compunents/header.php';
               <label for="palavra_passe">Palavra Passe</label>
             </div>
             <div class="checkbox mb-3">
-              <label><input type="checkbox" value="lembra-me">Lembrar-me</label>
+              <label><input type="checkbox" value="lembra-me"> Lembrar-me</label>
             </div>
             <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="utilizador" value="login">Entrar</button>
           </form>
@@ -79,8 +79,8 @@ include_once __DIR__ . '/Compunents/header.php';
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h6>About</h6>
-          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web. Se desejar ver o nosso Repositório do GitHub ou o nosso perfil do GitHub basta carregar em Repositório ou no nosso nome</p>
-          <p>Trabalho lecionado pelos professores: António José Viana, Marcelo Antunes Fernandes e Wenderson Wanzeller</p>
+          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web. Se desejar ver o nosso Repositório do GitHub ou o nosso perfil do mesmo, basta carregar em Repositório ou no nosso nome.</p>
+          <p>Trabalho lecionado pelos professores: António José Viana, Marcelo Antunes Fernandes e Wenderson Wanzeller.</p>
         </div>
 
         <div class="col-xs-6 col-md-3">

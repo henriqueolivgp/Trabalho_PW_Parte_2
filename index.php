@@ -37,13 +37,13 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
       </button>
       <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div style="background-color: #81a05a;" class="offcanvas-header text-light">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Vascoes</h5>
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Vascões</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div style="background-color: #81a05a;" class="offcanvas-body">
           <ul class="nav navbar-nav mb-2 mb-lg-0 h5 ml-auto">
             <li class="nav-item">
-              <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ login</a>
+              <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ Login</a>
             </li>
           </ul>
         </div>
@@ -52,7 +52,7 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
   </nav>
   <!--Navbar finished here-->
 
-  <h1 class="d-flex justify-content-center text-center p-4">Bem Vindo á Aldeia de vascões</h1>
+  <h1 class="d-flex justify-content-center text-center p-4">Bem-Vindo à Aldeia de Vascões</h1>
 
 
   <div class="container vh-100 d-flex align-items-center justify-content-center">
@@ -76,8 +76,8 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h6>About</h6>
-          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web. Se desejar ver o nosso Repositório do GitHub ou o nosso perfil do GitHub basta carregar em Repositório ou no nosso nome</p>
-          <p>Trabalho lecionado pelos professores: António José Viana, Marcelo Antunes Fernandes e Wenderson Wanzeller</p>
+          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web. Se desejar ver o nosso Repositório do GitHub ou o nosso perfil do mesmo, basta carregar em Repositório ou no nosso nome.</p>
+          <p>Trabalho lecionado pelos professores: António José Viana, Marcelo Antunes Fernandes e Wenderson Wanzeller.</p>
         </div>
 
         <div class="col-xs-6 col-md-3">
