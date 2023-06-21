@@ -18,8 +18,8 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
     <h1>Registar Utilizadores</h1>
   </div>
 
-  <div class="container">
-    <main class="bg-light">
+  <div class="container d-flex flex-column bg-light">
+    <main class="">
       <section class="py-4">
         <a href="/admin/Admin.php"><button type="button" class="btn btn-secondary px-5">Voltar</button></a>
       </section>

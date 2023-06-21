@@ -9,7 +9,7 @@ session_start();
 */
 function iniciarSessao($iniciar = true)
 {
-    if ($iniciar && session_status() === PHP_SESSION_NONE) {
+    if (session_status() === PHP_SESSION_ACTIVE) {
         session_start();
     }
 }
