@@ -26,7 +26,7 @@ include_once __DIR__ . '/Compunents/header.php';
                 <div style="background-color: #81a05a;" class="offcanvas-body">
                     <ul class="nav navbar-nav mb-2 mb-lg-0 h5 ml-auto">
                         <li class="nav-item">
-                            <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ login</a>
+                            <a class="text-light" style="text-decoration: none;" href="/APP/Register.php">Register</a> <a class="text-light" style="text-decoration: none;" href="/APP/Login.php">/ Login</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@ include_once __DIR__ . '/Compunents/header.php';
                     ?>
                 </section>
                 <form action="/src/controllers/aplicacao/controlar-registo.php" method="post">
-                    <h1 class="h3 mb-3 fw-normal">REGISTRO CRUD PHP</h1>
+                    <h1 class="h3 mb-3 fw-normal">REGISTO</h1>
                     <div class="form-floating mb-2">
                         <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
                         <label for="nome">Nome:</label>

@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-sm-12 col-md-6">
           <h6>About</h6>
-          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web. Se desejar ver o nosso Repositório do GitHub ou o nosso perfil do GitHub basta carregar em Repositório ou no nosso nome</p>
-          <p>Trabalho lecionado pelos professores: António José Viana, Marcelo Antunes Fernandes e Wenderson Wanzeller</p>
+          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web. Se desejar ver o nosso Repositório do GitHub ou o nosso perfil do mesmo, basta carregar em Repositório ou no nosso nome.</p>
+          <p>Trabalho lecionado pelos professores: António José Viana, Marcelo Antunes Fernandes e Wenderson Wanzeller.</p>
         </div>
 
         <div class="col-xs-6 col-md-3">
