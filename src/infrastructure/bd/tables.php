@@ -155,7 +155,7 @@ $pdo->exec(
     titulo CHAR NOT NULL, 
     texto TEXT NOT NULL,
     links TEXT,
-    categoria char);'
+    categoria CHAR);'
 );
 
 echo 'Tabela Corno_do_Bico_Page criada!' . PHP_EOL;
@@ -176,4 +176,36 @@ $sqlCreate = "INSERT INTO
         :categoria
     )";
 
+$pdo->exec('DROP TABLE IF EXISTS Percursos_Bike_Miradouros;');
+
+echo 'Tabela Percursos_Bike_Miradouros apagada!' . PHP_EOL;
+
 # Tabela geral para as tres ultimas paginas
+
+$pdo->exec(
+    'CREATE TABLE Percursos_Bike_Miradouros (
+    id INTEGER PRIMARY KEY,
+    img CHAR NULL,
+    titulo CHAR NOT NULL, 
+    texto TEXT NOT NULL,
+    links TEXT,
+    categoria CHAR NOT NULL);'
+);
+
+echo 'Tabela ceia criada!' . PHP_EOL;
+
+# INSERE UTILIZADOR
+$sqlCreate = "INSERT INTO 
+    Percursos_Bike_Miradouros (
+        img, 
+        titulo, 
+        texto, 
+        links,
+        categoria,)
+    VALUES (
+        :img, 
+        :titulo, 
+        :texto, 
+        :links,
+        :categoria
+    )";
