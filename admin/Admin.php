@@ -63,8 +63,8 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
                 <div class="card-body">
                     <h5 class="card-title">Percursos Pedestres</h5>
                     <p class="card-text">Aqui, o administrador pode inserir, atualizar ou apagar todas as informações.</p>
-                    <a href="/admin/PercursosPedestres/InserirInformacoesPercursos.php" class="card-link text-decoration-none">Inserir</a>
-                    <a href="/admin/PercursosPedestres/PercursosPedestresPage.php" class="card-link text-decoration-none">Atualizar/Apagar</a>
+                    <a href="/admin/Percursos_Bike_Miradouros/Inserir_Percursos_Bike_Miradouros.php" class="card-link text-decoration-none">Inserir</a>
+                    <a href="/admin/Percursos_Bike_Miradouros/All_Percursos_Bike_Miradouros.php" class="card-link text-decoration-none">Atualizar/Apagar</a>
                 </div>
             </div>
         </div>
