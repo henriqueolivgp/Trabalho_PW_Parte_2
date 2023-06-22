@@ -360,3 +360,112 @@ function registarUtilizador($utilizador)
 
     return false;
 }
+
+// Funções da Tabela Percursos_Bike_Miradouros
+
+function registarDados($info)
+{
+    # INSERE ceia COM PROTEÇÃO CONTRA SQLINJECTION
+    $sqlCreate = "INSERT INTO 
+     Percursos_Bike_Miradouros (
+        img, 
+        titulo, 
+        texto,
+        links,
+        categoria)
+     VALUES (
+         :img, 
+         :titulo, 
+         :texto, 
+         :links,
+         :categoria
+     )";
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
+
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    $sucesso = $PDOStatement->execute([
+        ':img' => $info['img'],
+        ':titulo' => $info['titulo'],
+        ':texto' => $info['texto'],
+        ':links' => $info['links'],
+        ':categoria' => $info['categoria']
+    ]);
+
+    # RECUPERA ID DO UTILIZADOR CRIADO
+    if ($sucesso) {
+        $info['id'] = $GLOBALS['pdo']->lastInsertId();
+
+    }
+    # RETORNO RESULTADO DA INSERSÃO
+    return $info;
+}
+
+# Ler Info
+function lerdados($id)
+{
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->prepare('SELECT * FROM Percursos_Bike_Miradouros WHERE id = ?;');
+
+    # FAZ O BIND
+    $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
+
+    # EXECUTA A CONSULTA
+    $PDOStatement->execute();
+
+    # RETORNA OS DADOS
+    return $PDOStatement->fetch();
+}
+
+function lerPercursos()
+{
+    # PREPARA A QUERY
+    $PDOStatement = $GLOBALS['pdo']->prepare('SELECT * FROM Percursos_Bike_Miradouros;');
+
+    $Infopercursos = [] ;
+
+    # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
+    while ($listapercursos = $PDOStatement->fetch()) {
+        $Infopercursos[] = $listapercursos;
+    }
+    # RETORNA OS DADOS
+    return $Infopercursos;
+}
+
+function AtualizarDados($info)
+{
+    # INSERE Ceia COM PROTEÇÃO CONTRA SQLINJECTION, INCLUSINDO PALAVRA PASSE.
+    $sqlUpdate = "UPDATE  
+    info SET
+    img = :img, 
+    titulo = :titulo, 
+    texto = :texto,  
+    links = :links,
+    categoria = :categoria, 
+    WHERE id = :id;";
+
+    $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
+
+    # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
+    return $PDOStatement->execute([
+        ':id' => $info['id'],
+        ':img' => $info['img'],
+        ':titulo' => $info['titulo'],
+        ':texto' => $info['texto'],
+        ':links' => $info['links'],
+        ':categoria' => $info['categoria']
+    ]);
+}
+
+# apaga a info do ceia
+function deleteDados($id)
+{
+    # PREPARA A CONSULTA
+    $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM Percursos_Bike_Miradouros WHERE id = ?;');
+
+    # REALIZA O BIND
+    $PDOStatement->bindValue(1, $id, PDO::PARAM_INT);
+
+    # EXECUTA A CONSULTA E RETORNA OS DADOS
+    return $PDOStatement->execute();
+}
