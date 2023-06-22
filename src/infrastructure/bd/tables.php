@@ -190,7 +190,7 @@ $pdo->exec(
     categoria CHAR NOT NULL);'
 );
 
-echo 'Tabela ceia criada!' . PHP_EOL;
+echo 'Tabela Percursos_Bike_Miradouros criada!' . PHP_EOL;
 
 # INSERE UTILIZADOR
 $sqlCreate = "INSERT INTO 

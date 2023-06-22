@@ -30,7 +30,7 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
     ?>
 
     <div class="p-4 mb-2 text-dark">
-        <h1 class="text-center">O admin "<?= $utilizador['nome'] ?? null ?>" acedeu ao painel <br> de controlo</h1>
+        <h1 class="text-center">O admin <?= $utilizador['nome'] ?? null ?> acedeu ao painel <br> de controlo</h1>
     </div>
 
     <div class="container mb-4 d-flex vw-100">
