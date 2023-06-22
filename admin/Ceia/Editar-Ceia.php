@@ -1,14 +1,12 @@
 <?php
 # CARREGA MIDDLEWARE PAGARA GARANTIR QUE APENAS UTILIZADORES AUTENTICADOS ACESSEM ESTE SITIO
-require_once __DIR__ . '/../../src/middleware/middleware-utilizador.php';
+require_once __DIR__ . '/../../src/middleware/middleware-administrador.php';
 
 # CARREGA O CABECALHO PADRÃO COM O TÍTULO
 $titulo = ' - Editar Utilizador';
 //include_once __DIR__ . '/templates/cabecalho.php';
+require_once __DIR__ . '/../../src/infrastructure/bd/user.php';
 
-# ACESSA DE FUNÇÕES AUXILIADORAS. 
-# NOTA: O SIMBOLO ARROBA SERVE PARA NÃO MOSTRAR MENSAGEM DE WARNING, POIS A FUNÇÃO ABAIXO TAMBÉM INICIA SESSÕES
-@require_once __DIR__ . '/../../src/auxiliadores/auxiliador.php';
 $info = ceia();
 
 require_once __DIR__ . '/../../APP/Compunents/header.php';
@@ -51,24 +49,23 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
           ?>
         </section>
         <section>
-          <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-ceia.php" method="post">
+          <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-ceia.php" method="post" class="form-control py-3">
             <div class="input-group mb-3">
-              <span class="input-group-text">Titulo</span>
-              <input type="text" class="form-control" name="titulo" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['titulo']) ? $_REQUEST['titulo'] : $utilizador['titulo'] ?>" required>
+              <span class="input-group-text">Nome</span>
+              <input type="text" class="form-control" name="titulo" maxlength="100" size="100" value="<?= isset($_REQUEST['titulo']) ? $_REQUEST['titulo'] : null ?>" required>
             </div>
             <div class="input-group mb-3">
-              <span class="input-group-text">Texto</span>
-              <input type="text" class="form-control" name="texto" maxlength="400" size="400" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : $utilizador['texto'] ?>" required>
+              <span class="input-group-text">Apelido</span>
+              <input type="text" class="form-control" name="texto" maxlength="100" size="100" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : null ?>" required>
             </div>
-            <label class="input-group-text" for="inputGroupFile01">Imagem</label>
-            <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="img" />
+            <div class="d-grid col-4 mx-auto">
+              <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
+              <input type="hidden" name="foto" value="<?= isset($_REQUEST['img']) ? $_REQUEST['img'] : null ?>">
+              <button type="submit" class="btn btn-success" name="info" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Enviar</button>
+            </div>
+          </form>
+        </section>
     </div>
-    <div class="d-grid col-4 mx-auto">
-      <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="info" value="perfil">Alterar</button>
-    </div>
-    </form>
-    </section>
-  </div>
   </div>
   <div class="">
     <?php

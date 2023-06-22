@@ -145,9 +145,10 @@ function criar($requisicao)
     }
 }
 
-/**
- * FUNÇÃO RESPONSÁVEL POR ATUALIZAR UM UTILIZADOR
+/*
+ * FUNÇÃO RESPONSÁVEL POR ATUALIZAR UM UTILIZADOR*
  */
+
 function atualizar($requisicao)
 {
     # VALIDA DADOS DO UTILIZADOR
@@ -260,7 +261,7 @@ function atualizarPerfil($requisicao)
             $params = '?' . http_build_query($dados);
 
             # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /../../../APP/index.php' . $params);
+            header('location: /../../../APP/perfil.php' . $params);
         }
     }
 }

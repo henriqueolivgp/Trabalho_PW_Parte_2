@@ -52,33 +52,45 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
           ?>
         </section>
         <section>
-          <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-utilizador.php" method="post">
+          <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-utilizador.php" method="post" class="form-control py-3">
             <div class="input-group mb-3">
               <span class="input-group-text">Nome</span>
-              <input type="text" class="form-control" name="nome" placeholder="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : $utilizador['nome'] ?>" required>
+              <input type="text" class="form-control" name="nome" maxlength="100" size="100" value="<?= isset($_REQUEST['nome']) ? $_REQUEST['nome'] : null ?>" required>
             </div>
             <div class="input-group mb-3">
               <span class="input-group-text">Apelido</span>
-              <input type="text" class="form-control" name="apelido" maxlength="100" size="100" value="<?= isset($_REQUEST['apelido']) ? $_REQUEST['apelido'] : $utilizador['apelido'] ?>" required>
+              <input type="text" class="form-control" name="apelido" maxlength="100" size="100" value="<?= isset($_REQUEST['apelido']) ? $_REQUEST['apelido'] : null ?>" required>
             </div>
             <div class="input-group mb-3">
               <span class="input-group-text">NIF</span>
-              <input type="tel" class="form-control" name="nif" maxlength="9" size="9" value="<?= isset($_REQUEST['nif']) ? $_REQUEST['nif'] : $utilizador['nif'] ?>" required>
+              <input type="tel" class="form-control" name="nif" maxlength="9" size="9" value="<?= isset($_REQUEST['nif']) ? $_REQUEST['nif'] : null ?>" required>
             </div>
             <div class="input-group mb-3">
               <span class="input-group-text">Telemóvel</span>
-              <input type="tel" class="form-control" name="telemovel" maxlength="9" value="<?= isset($_REQUEST['telemovel']) ? $_REQUEST['telemovel'] : $utilizador['telemovel'] ?>" required>
+              <input type="tel" class="form-control" name="telemovel" maxlength="9" value="<?= isset($_REQUEST['telemovel']) ? $_REQUEST['telemovel'] : null ?>" required>
             </div>
             <div class="input-group mb-3">
               <span class="input-group-text">E-mail</span>
-              <input type="email" class="form-control" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : $utilizador['email'] ?>" required>
+              <input type="email" class="form-control" name="email" maxlength="255" value="<?= isset($_REQUEST['email']) ? $_REQUEST['email'] : null ?>" required>
             </div>
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupFile01">Foto de Perfil</label>
               <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
             </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">Palavra Passe</span>
+              <input type="password" class="form-control" name="palavra_passe" maxlength="255">
+            </div>
+            <div class="input-group mb-3">
+              <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" name="administrador" role="switch" id="flexSwitchCheckChecked" <?= isset($_REQUEST['administrador']) && $_REQUEST['administrador'] == true ? 'checked' : null ?>>
+                <label class="form-check-label" for="flexSwitchCheckChecked">Administrador</label>
+              </div>
+            </div>
             <div class="d-grid col-4 mx-auto">
-              <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="utilizador" value="perfil">Alterar</button>
+              <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
+              <input type="hidden" name="foto" value="<?= isset($_REQUEST['foto']) ? $_REQUEST['foto'] : null ?>">
+              <button type="submit" class="btn btn-success" name="utilizador" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Enviar</button>
             </div>
           </form>
         </section>
