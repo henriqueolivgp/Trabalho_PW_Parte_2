@@ -34,7 +34,7 @@ if (isset($_GET['info'])) {
     if ($_GET['info'] == 'atualizar') {
 
         # RECUPERA DADOS DO UTILIZADOR PELO ID RECEBIDO
-        $info = lerinfo($_GET['id']);
+        $info = lerdados($_GET['id']);
 
         # CRIA A SESSÃO AÇÃO ATUALIZAR PARA MANIPULAR O BOTÃO DE ENVIO DO FORMULÁRIO UTILIZADOR
         # ESSA ESTRATÉGIA FOI EXPLICADO NO FICHEIRO UTILIZADOR.PHP
@@ -49,7 +49,7 @@ if (isset($_GET['info'])) {
     if ($_GET['info'] == 'deletar') {
 
         # RECUPERA DADOS DO UTILIZADOR
-        $info = lerinfo($_GET['id']);
+        $info = lerdados($_GET['id']);
 
         # DELETA info
         $sucesso = DeleteInfo($info);
@@ -144,7 +144,7 @@ function AtualizarPerfilInfo($requisicao)
         }
 
         # ATUALIZA UTILIZADOR
-        $sucesso = AtualizarInfo($dados);
+        $sucesso = AtualizarDados($dados);
 
         # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
         if ($sucesso) {
@@ -173,7 +173,7 @@ function DeleteInfo($Info)
     $caminhoFicheiro = __DIR__ . '/../../../recursos/uploads_Percursos';
 
     # VALIDA DADOS DO UTILIZADOR
-    $retorno = deleteInfos($Info['id']);
+    $retorno = deleteDados($Info['id']);
 
     # COMANDO PARA APAGAR O FICHEIRO
     $caminhoCompleto = $caminhoFicheiro . $Info['img'];
