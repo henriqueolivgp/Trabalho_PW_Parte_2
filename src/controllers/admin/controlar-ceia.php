@@ -140,7 +140,7 @@ function AtualizarPerfilInfo($requisicao)
         if (!empty($_FILES['img']['name'])) {
 
             # GUARDA FOTOS EM DIRETÓRIO LOCAL
-            $dados = guardaFoto($dados, $info); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
+            $dados = guardaFoto($dados); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
         }
 
         # ATUALIZA UTILIZADOR
