@@ -119,7 +119,7 @@ function InserirInfo($requisicao)
  */
 function AtualizarPerfilInfo($requisicao)
 {
-    # VALIDA DADOS DO UTILIZADOR
+    # VALIDA DADOS DO UTILIZADOR (VALIDAÇÃO)
     $dados = infoValida($requisicao);
 
     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
@@ -128,43 +128,41 @@ function AtualizarPerfilInfo($requisicao)
         # RECUPERA MENSAGEM DE ERRO, CASO EXISTA
         $_SESSION['erros'] = $dados['invalido'];
 
-        # CRIA A SESSÃO AÇÃO ATUALIZAR PARA MANIPULAR O BOTÃO DE ENVIO DO FORMULÁRIO UTILIZADOR
-        $_SESSION['acao'] = 'atualizar';
-
         # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
         header('location: /../../../admin/Ceia/Editar-Ceia.php' . $params);
 
-        return false;
-    }
+    } else {
 
-    # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
-    if (!empty($_FILES['foto']['name'])) {
-        $dados = guardaFotoinfo($dados, $requisicao);
-    }
+        # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
+        if (!empty($_FILES['img']['name'])) {
 
-    # ATUALIZA UTILIZADOR (REPOSITÓRIO PDO)
-    $sucesso = AtualizarInfo($dados);
+            # GUARDA FOTOS EM DIRETÓRIO LOCAL
+            $dados = guardaFoto($dados, $info); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
+        }
 
-    # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
-    if ($sucesso) {
+        # ATUALIZA UTILIZADOR
+        $sucesso = AtualizarInfo($dados);
 
-        # DEFINE MENSAGEM DE SUCESSO
-        $_SESSION['sucesso'] = 'Utilizador alterado com sucesso!';
+        # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
+        if ($sucesso) {
 
-        # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
-        $dados['acao'] = 'atualizar';
+            # DEFINE MENSAGEM DE SUCESSO
+            $_SESSION['sucesso'] = 'Utilizador alterado com sucesso!';
 
-        # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
-        $params = '?' . http_build_query($dados);
+            # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
+            $_SESSION['acao'] = 'atualizar';
 
-        # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /../../../admin/Ceia/Editar-Ceia.php' . $params);
+            # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
+            $params = '?' . http_build_query($dados);
+
+            # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+            header('location: location: /../../../admin/Ceia/Editar-Ceia.php' . $params);
+        }
     }
 }
-
 
 /**
  * FUNÇÃO RESPONSÁVEL POR DELETAR a

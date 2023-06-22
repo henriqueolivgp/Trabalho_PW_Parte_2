@@ -140,7 +140,6 @@ $sqlCreate = "INSERT INTO
         :texto, 
         :links
     )";
-    
 
 $pdo->exec('DROP TABLE IF EXISTS Corno_do_Bico_Page;');
 

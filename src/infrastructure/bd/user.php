@@ -126,7 +126,7 @@ function AtualizarInfo($info)
 {
     # INSERE Ceia COM PROTEÇÃO CONTRA SQLINJECTION, INCLUSINDO PALAVRA PASSE.
     $sqlUpdate = "UPDATE  
-    info SET
+    ceia SET
     img = :img, 
     titulo = :titulo, 
     texto = :texto,   
