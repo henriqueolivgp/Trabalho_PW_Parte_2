@@ -61,10 +61,18 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
                             <span class="input-group-text">Texto</span>
                             <input type="text" class="form-control" name="texto" maxlength="400" size="400" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : null ?>" required>
                         </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Links</span>
+                            <input type="text" class="form-control" name="links" maxlength="100" size="100" value="<?= isset($_REQUEST['links']) ? $_REQUEST['links'] : null ?>" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Categoria</span>
+                            <input type="text" class="form-control" name="categoria" maxlength="100" size="100" value="<?= isset($_REQUEST['categoria']) ? $_REQUEST['categoria'] : null ?>" required>
+                        </div>
                         </div>
                         <div class="d-grid col-4 mx-auto mb-5">
                             <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
-                            <input type="hidden" name="foto" value="<?= isset($_REQUEST['foto']) ? $_REQUEST['foto'] : null ?>">
+                            <input type="hidden" name="img" value="<?= isset($_REQUEST['img']) ? $_REQUEST['img'] : null ?>">
                             <button class="w-100 btn btn-lg btn-success mb-2" type="submit" name="info" value="criar" <?= isset($_REQUEST['acao']) && $_REQUEST['acao'] == 'atualizar' ? 'value="atualizar"' : 'value="criar"' ?>>Inserir</button>
                         </div>
                     </form>
