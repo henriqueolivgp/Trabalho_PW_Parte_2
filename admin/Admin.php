@@ -67,22 +67,6 @@ require_once __DIR__ . '/../APP/Compunents/header.php';
                     <a href="/admin/PercursosPedestres/PercursosPedestresPage.php" class="card-link text-decoration-none">Atualizar/Apagar</a>
                 </div>
             </div>
-            <div class="card me-4 mt-4" style="width: 18rem; text-align:justify;">
-                <div class="card-body">
-                    <h5 class="card-title">Mountain Bike</h5>
-                    <p class="card-text">Aqui, o administrador pode inserir, atualizar ou apagar todas as informações.</p>
-                    <a href="/admin/MountainBike/InserirInformacoesBike.php" class="card-link text-decoration-none">Inserir</a>
-                    <a href="/admin/MountainBike/MoutainBikePage.php" class="card-link text-decoration-none">Atualizar/Apagar</a>
-                </div>
-            </div>
-            <div class="card me-4 mt-4" style="width: 18rem; text-align:justify;">
-                <div class="card-body">
-                    <h5 class="card-title">Miradouros</h5>
-                    <p class="card-text">Aqui, o administrador pode inserir, atualizar ou apagar todas as informações.</p>
-                    <a href="/admin/Miradouros/InserirInformacoesMiradouros.php" class="card-link text-decoration-none">Inserir</a>
-                    <a href="/admin/Miradouros/MiradourosPage.php" class="card-link text-decoration-none">Atualizar/Apagar</a>
-                </div>
-            </div>
         </div>
 
     </div>
