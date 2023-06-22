@@ -41,21 +41,21 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
 
                         $InfoPercursos_Bike_Miradouros = lerPercursos();
 
-                        foreach ($InfoPercursos_Bike_Miradouros as $info) {
+                        foreach ($InfoPercursos_Bike_Miradouros as $Infopercursos) {
                         ?>
                             <tr>
-                                <th><?php echo $info['id']; ?></th>
-                                <td><?php echo $info['img']; ?></td>
-                                <td><?php echo $info['titulo']; ?></td>
-                                <td><?php echo $info['texto']; ?></td>
-                                <td><?php echo $info['links']; ?></td>
-                                <td><?php echo $info['categoria']; ?></td>
+                                <th><?php echo $Infopercursos['id']; ?></th>
+                                <td><?php echo $Infopercursos['img']; ?></td>
+                                <td><?php echo $Infopercursos['titulo']; ?></td>
+                                <td><?php echo $Infopercursos['texto']; ?></td>
+                                <td><?php echo $Infopercursos['links']; ?></td>
+                                <td><?php echo $Infopercursos['categoria']; ?></td>
                                 <td>
-                                    <a href="../../src//controllers//admin/controlar-Percursos.php?= 'info=atualizar&id=' . $info['id'] ?>">
+                                    <a href="../../src//controllers//admin/controlar-Percursos.php?<?= 'info=atualizar&id=' . $Infopercursos['id'] ?>">
                                         <button type="button" class="btn btn-info">Editar</button>
                                     </a>
 
-                                    <a href="../../src/controllers/admin/controlar-Percursos.php?= 'info=deletar&id=' . $info['id'] ?>"><button class="btn btn-danger" type="submit">Excluir</button></a>
+                                    <a href="../../src/controllers/admin/controlar-Percursos.php?<?= 'info=deletar&id=' . $Infopercursos['id'] ?>"><button class="btn btn-danger" type="submit">Excluir</button></a>
                                 </td>
                             </tr>
                         <?php
