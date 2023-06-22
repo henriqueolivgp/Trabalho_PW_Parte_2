@@ -101,7 +101,7 @@ function InserirInfo($requisicao)
     $dados = guardaFotoinfo($dados);
 
     # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
-    $sucesso = registarinfo($dados);
+    $sucesso = registarDados($dados);
 
     # REDIRECIONA UTILIZADOR PARA PÁGINA DE REGISTO COM MENSAGEM DE SUCCESO
     if ($sucesso) {
