@@ -1,27 +1,9 @@
 <?php
 # FUNÇÕES AUXILIADORAS
 require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
+
+include_once __DIR__ . '/APP/Compunents/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="pt'pt">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- All Styles for -->
-  <link rel="stylesheet" href="../../Style/footer.css">
-  <link rel="stylesheet" href="../../Style/preloader.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-  <title>Vascões</title>
-</head>
 
 <body>
 
@@ -73,39 +55,8 @@ require_once __DIR__ . '/src/middleware/middleware-nao-autenticado.php';
     <!-- Mapa e video acabam aqui-->
 
   <!-- Site footer -->
-  <footer class="site-footer footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
-          <p class="text-justify">Website realizado com base na matéria aprendida nas aulas de Programação Web. Se desejar ver o nosso Repositório do GitHub ou o nosso perfil do mesmo, basta carregar em Repositório ou no nosso nome.</p>
-          <p>Trabalho lecionado pelos professores: António José Viana, Marcelo Antunes Fernandes e Wenderson Wanzeller.</p>
-        </div>
+  <?php
 
-        <div class="col-xs-6 col-md-3">
-          <h6>Quick Link</h6>
-          <ul class="footer-links">
-            <li><a style="text-decoration: none;" href="https://github.com/henriqueolivgp/Trabalho_PW_Parte_2" target="_blank">Repositório</a></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2023 Este trabalho foi realizado por
-            <a style="text-decoration: none;" href="https://github.com/henriqueolivgp" target="_blank">Henrique Oliveira</a> e <a style="text-decoration: none;" href="https://github.com/pedrof04" target="_blank">Pedro Ferreira</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  require_once __DIR__ . '/APP/Compunents/footer.php';
 
-  <script src="../../static/js/preloader.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+  ?>
