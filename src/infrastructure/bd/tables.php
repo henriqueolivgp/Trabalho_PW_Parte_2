@@ -20,7 +20,7 @@ $pdo->exec(
     nif CHAR, 
     telemovel CHAR, 
     email CHAR NOT NULL, 
-    foto CHAR NULL, 
+    foto BLOB NULL, 
     administrador CHAR, 
     dono CHAR,
     palavra_passe CHAR);'
@@ -149,7 +149,7 @@ echo 'Tabela Corno_do_Bico_Page apagada!' . PHP_EOL;
 $pdo->exec(
     'CREATE TABLE Corno_do_Bico_Page (
     id INTEGER PRIMARY KEY,
-    img CHAR NULL,
+    img BLOB NULL,
     titulo CHAR NOT NULL, 
     texto TEXT NOT NULL,
     links TEXT,
@@ -183,7 +183,7 @@ echo 'Tabela Percursos_Bike_Miradouros apagada!' . PHP_EOL;
 $pdo->exec(
     'CREATE TABLE Percursos_Bike_Miradouros (
     id INTEGER PRIMARY KEY,
-    img CHAR NULL,
+    img BLOB NULL,
     titulo CHAR NOT NULL, 
     texto TEXT NOT NULL,
     links TEXT,
