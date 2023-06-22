@@ -316,7 +316,7 @@ function deletar($utilizador)
     $retorno = deletarUtilizador($utilizador['id']);
 
     # COMANDO PARA APAGAR O FICHEIRO
-    unlink($caminhoFicheiro . $utilizador['foto']);
+    unlink($caminhoFicheiro . $utilizador['img']);
 
     # RETORNA RESULTADO DO BANCO DE DADOS
     return $retorno;
@@ -344,7 +344,7 @@ function guardaFoto($dados, $fotoAntiga = null)
     $novoNome = uniqid('foto_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/../../../recursos/user-image';
+    $caminhoFicheiro = __DIR__ . '/../../../recursos/user-image/';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;

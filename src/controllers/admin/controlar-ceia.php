@@ -22,7 +22,7 @@ if (isset($_POST['info'])) {
     ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
     if ($_POST['info'] == 'atualizar') {
         # ATUALIZA UM UTILIZADOR
-        atualizarInfo($_POST);
+        AtualizarPerfilInfo($_POST);
     }
 }
 
@@ -30,39 +30,42 @@ if (isset($_POST['info'])) {
 ## CONTROLA A ROTA PARA O CARREGAMENTO DE UM UTILIZADOR NA PÁGINA ATUALIZAR-UTILIZADOR
 if (isset($_GET['info'])) {
 
-   ## CONTROLA A ROTA PARA A CRIAÇÃO DE NOVOS UTILIZADORES
-   if ($_GET['info'] == 'atualizar') {
+    ## CONTROLA A ROTA PARA A CRIAÇÃO DE NOVOS UTILIZADORES
+    if ($_GET['info'] == 'atualizar') {
 
-    # RECUPERA DADOS DO UTILIZADOR PELO ID RECEBIDO
-    $info = lerinfo($_GET['id']);
+        # RECUPERA DADOS DO UTILIZADOR PELO ID RECEBIDO
+        $info = lerinfo($_GET['id']);
 
-    # CRIA A SESSÃO AÇÃO ATUALIZAR PARA MANIPULAR O BOTÃO DE ENVIO DO FORMULÁRIO UTILIZADOR
-    # ESSA ESTRATÉGIA FOI EXPLICADO NO FICHEIRO UTILIZADOR.PHP
-    $info['acao'] = 'atualizar';
+        # CRIA A SESSÃO AÇÃO ATUALIZAR PARA MANIPULAR O BOTÃO DE ENVIO DO FORMULÁRIO UTILIZADOR
+        # ESSA ESTRATÉGIA FOI EXPLICADO NO FICHEIRO UTILIZADOR.PHP
+        $info['acao'] = 'atualizar';
 
-    # ENVIA PARÂMETROS COM DADOS DO UTILIZADOR PARA A PÁGINA UTILIZADOR RECUPERAR DADOS PARA MANIPULAR A ALTERAÇÃO
-    $params = '?' . http_build_query($info);
+        # ENVIA PARÂMETROS COM DADOS DO UTILIZADOR PARA A PÁGINA UTILIZADOR RECUPERAR DADOS PARA MANIPULAR A ALTERAÇÃO
+        $params = '?' . http_build_query($info);
 
-    header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
-}
-    if($_GET['info']=='deletar'){
+        header('location: /../../../admin/Ceia/Editar-Ceia.php' . $params);
+    }
+    ## CONTROLA A ROTA PARA A EXCLUSÃO DE UTILIZADORES
+    if ($_GET['info'] == 'deletar') {
 
-        $info = lerinfo($_GET['id']); 
-        
+        # RECUPERA DADOS DO UTILIZADOR
+        $info = lerinfo($_GET['id']);
+
         # DELETA info
-        $sucesso = deleteinfo($info['id']);
+        $sucesso = DeleteInfo($info);
 
-     # REDIRECIONA UTILIZADOR PARA PÁGINA ADMIN COM MENSAGEM DE SUCCESO
-     if ($sucesso) {
-         # DEFINE MENSAGEM DE SUCESSO
-         $_SESSION['sucesso'] = 'Info deletado com sucesso!';
+        # REDIRECIONA info PARA PÁGINA ADMIN COM MENSAGEM DE SUCCESO
+        if ($sucesso) {
+            # DEFINE MENSAGEM DE SUCESSO
+            $_SESSION['sucesso'] = 'info deletado com sucesso!';
 
-         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-         header('location: /src/Pages/CrudSitios/index.php');
-         
-     }
+            # REDIRECIONA info COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+            header('location: /../../../admin/Ceia/All-Ceia.php');
+        }
     }
 }
+
+
 
 
 ###############
@@ -95,7 +98,7 @@ function InserirInfo($requisicao)
     }
 
     # GARDA FOTO EM DIRETÓRIO LOCAL (FUNÇÃO LOCAL)
-    #$dados = guardaFotoinfo($dados);
+    $dados = guardaFotoinfo($dados);
 
     # GUARDA UTILIZADOR NA BASE DE DADOS (REPOSITÓRIO PDO)
     $sucesso = registarinfo($dados);
@@ -107,9 +110,7 @@ function InserirInfo($requisicao)
         $_SESSION['sucesso'] = 'Info criada com sucesso!';
 
         # REDIRECIONA O UTILIZADO PARA A PÁGINA ADMIN
-        header('location: /admin/Ceia/InserirInformacoes.php');
-
-        
+        header('location: /../../../admin/Ceia/InserirInformacoesCeia.php');
     }
 }
 
@@ -118,7 +119,7 @@ function InserirInfo($requisicao)
  */
 function AtualizarPerfilInfo($requisicao)
 {
-    # VALIDA DADOS DO UTILIZADOR (VALIDAÇÃO)
+    # VALIDA DADOS DO UTILIZADOR
     $dados = infoValida($requisicao);
 
     # VERIFICA SE EXISTEM ERROS DE VALIDAÇÃO
@@ -127,54 +128,60 @@ function AtualizarPerfilInfo($requisicao)
         # RECUPERA MENSAGEM DE ERRO, CASO EXISTA
         $_SESSION['erros'] = $dados['invalido'];
 
+        # CRIA A SESSÃO AÇÃO ATUALIZAR PARA MANIPULAR O BOTÃO DE ENVIO DO FORMULÁRIO UTILIZADOR
+        $_SESSION['acao'] = 'atualizar';
+
         # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
         $params = '?' . http_build_query($requisicao);
 
         # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-        header('location: /src/Pages/Perfil/perfil.php' . $params);
-    } else {
-        
-         # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO
-         if (!empty($_FILES['foto']['name'])) {
-             # GUARDA FOTOS EM DIRETÓRIO LOCAL
-             $dados = guardaFotoinfo($dados,$requisicao); // UTILIZADOR É PASSADO PARA PEPAR CAMINHO FOTO ANTIGA
-         }
+        header('location: /../../../admin/Ceia/Editar-Ceia.php' . $params);
 
-        # ATUALIZA UTILIZADOR
-        $sucesso = AtualizarInfo($dados);
+        return false;
+    }
 
-        # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
-        if ($sucesso) {
+    # GARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
+    if (!empty($_FILES['foto']['name'])) {
+        $dados = guardaFotoinfo($dados, $requisicao);
+    }
 
-            # DEFINE MENSAGEM DE SUCESSO
-            $_SESSION['sucesso'] = 'Informação alterado com sucesso!';
+    # ATUALIZA UTILIZADOR (REPOSITÓRIO PDO)
+    $sucesso = AtualizarInfo($dados);
 
-            # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
-            $_SESSION['acao'] = 'atualizar';
+    # REDIRECIONA UTILIZADOR PARA PÁGINA DE ALTERAÇÃO COM MENSAGEM DE SUCCESO
+    if ($sucesso) {
 
-            # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
-            $params = '?' . http_build_query($dados);
+        # DEFINE MENSAGEM DE SUCESSO
+        $_SESSION['sucesso'] = 'Utilizador alterado com sucesso!';
 
-            # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
-            header('location: /src/Pages/CrudSitios/infosPerfil.php' . $params);
-        }
+        # DEFINI BOTÃO DE ENVIO DO FORMULÁRIO
+        $dados['acao'] = 'atualizar';
+
+        # RECUPERA DADOS DO FORMULÁRIO PARA RECUPERAR PREENCHIMENTO ANTERIOR
+        $params = '?' . http_build_query($dados);
+
+        # REDIRECIONA UTILIZADOR COM DADOS DO FORMULÁRIO ANTERIORMENTE PREENCHIDO
+        header('location: /../../../admin/Ceia/Editar-Ceia.php' . $params);
     }
 }
 
 
 /**
- * FUNÇÃO RESPONSÁVEL POR DELETAR UM UTILIZADOR
+ * FUNÇÃO RESPONSÁVEL POR DELETAR a
  */
 function DeleteInfo($Info)
 {
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/src/Assets/upload';
+    $caminhoFicheiro = __DIR__ . '/../../../recursos/uploadsCeia';
 
     # VALIDA DADOS DO UTILIZADOR
-    $retorno = DeleteInfo($Info);
+    $retorno = deleteInfos($Info['id']);
 
     # COMANDO PARA APAGAR O FICHEIRO
-    unlink($caminhoFicheiro . $Info['foto']);
+    $caminhoCompleto = $caminhoFicheiro . $Info['img'];
+    if (file_exists($caminhoCompleto)) {
+        unlink($caminhoCompleto);
+    }
 
     # RETORNA RESULTADO DO BANCO DE DADOS
     return $retorno;
@@ -186,10 +193,10 @@ function DeleteInfo($Info)
 function guardaFotoinfo($dados, $fotoAntiga = null)
 {
     # UTILIZA VARIÁVEL GLOBAL PARA PEGAR O NOME DO FICHEIRO
-    $nomeFicheiro = $_FILES['foto']['name'];
+    $nomeFicheiro = $_FILES['img']['name'];
 
     # PAGA O FICHEIRO TEMPORÁRIO
-    $ficheiroTemporario = $_FILES['foto']['tmp_name'];
+    $ficheiroTemporario = $_FILES['img']['tmp_name'];
 
     # PEGA TIPO DE EXTENSÃO DA FOTO
     $extensao = pathinfo($nomeFicheiro, PATHINFO_EXTENSION);
@@ -198,10 +205,10 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     $extensao = strtolower($extensao);
 
     # CRIA UM NOME ÚNICO PARA O FICHEIRO
-    $novoNome = uniqid('foto_') . '.' . $extensao;
+    $novoNome = uniqid('img_') . '.' . $extensao;
 
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '../../Imagem/Uploads';
+    $caminhoFicheiro = __DIR__ . '/../../../recursos/uploadsCeia/';
 
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;
@@ -210,18 +217,20 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
     if (move_uploaded_file($ficheiroTemporario, $ficheiro)) {
 
         # ATRIBUI NOME DO FICHEIRO NO ARRAY DE DADOS PARA ARMAZENAMENTO NA BASE DE DADOS
-        $dados['foto'] = $novoNome;
+        $dados['img'] = $novoNome;
 
-         # APAGA FICHEIRO ANTERIOR, CASO SEJA UMA ATUALIZAÇÃO DE FOTO DE PERFIL
-         if (isset($dados['info']) && ($dados['info'] == 'atualizar') || ($dados['info'] == 'perfil')) {
+        # APAGA FICHEIRO ANTERIOR, CASO SEJA UMA ATUALIZAÇÃO DE FOTO DE PERFIL
+        if (isset($dados['ceia']) && ($dados['ceia'] == 'atualizar' || $dados['ceia'] == 'perfil')) {
+            $fotoAntiga = $fotoAntiga['img']; // Obtém apenas o nome do arquivo antigo
 
             # COMANDO PARA APAGAR O FICHEIRO
-            unlink($caminhoFicheiro . $fotoAntiga['foto']);
+            $caminhoCompleto = $caminhoFicheiro . $fotoAntiga;
+            if (file_exists($caminhoCompleto)) {
+                unlink($caminhoCompleto);
+            }
         }
+        
     }
-    # RETORNA OS DADOS DO FICHEIRO PARA GARDAR NA BASE DE DADOS
+    # RETORNA OS info DO FICHEIRO PARA GARDAR NA BASE DE info
     return $dados;
 }
-
-
-?>

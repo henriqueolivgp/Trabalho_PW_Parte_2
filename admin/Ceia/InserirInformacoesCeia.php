@@ -51,7 +51,7 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
                     <form enctype="multipart/form-data" action="/src/controllers/admin/controlar-ceia.php" method="post">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="inputGroupFile01">Imagem</label>
-                            <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
+                            <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="img" />
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Titulo</span>
@@ -60,10 +60,6 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
                         <div class="input-group mb-3">
                             <span class="input-group-text">Texto</span>
                             <input type="text" class="form-control" name="texto" maxlength="400" size="400" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : null ?>" required>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Links</span>
-                            <input type="text" class="form-control" name="links" maxlength="400" size="400" value="<?= isset($_REQUEST['links']) ? $_REQUEST['links'] : null ?>" >
                         </div>
                         </div>
                         <div class="d-grid col-4 mx-auto mb-5">

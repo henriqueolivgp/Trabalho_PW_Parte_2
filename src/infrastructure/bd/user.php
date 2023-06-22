@@ -65,13 +65,11 @@ function registarInfo($info)
      ceia (
         img, 
         titulo, 
-        texto,
-        links) 
+        texto) 
      VALUES (
          :img, 
          :titulo, 
-         :texto, 
-         :links
+         :texto
      )";
     # PREPARA A QUERY
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlCreate);
@@ -80,8 +78,7 @@ function registarInfo($info)
     $sucesso = $PDOStatement->execute([
         ':img' => $info['img'],
         ':titulo' => $info['titulo'],
-        ':texto' => $info['texto'],
-        ':links' => $info['links']
+        ':texto' => $info['texto']
     ]);
 
     # RECUPERA ID DO UTILIZADOR CRIADO
@@ -132,8 +129,7 @@ function AtualizarInfo($info)
     info SET
     img = :img, 
     titulo = :titulo, 
-    texto = :texto,  
-    links = :links 
+    texto = :texto,   
     WHERE id = :id;";
 
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
@@ -144,7 +140,6 @@ function AtualizarInfo($info)
         ':img' => $info['img'],
         ':titulo' => $info['titulo'],
         ':texto' => $info['texto'],
-        ':links' => $info['links']
     ]);
 }
 

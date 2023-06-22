@@ -36,6 +36,15 @@ function utilizador()
     }
 }
 
+function ceia()
+{
+    if (autenticado()) {
+        return lerinfo($_SESSION['id']);
+    } else {
+        return false;
+    }
+}
+
 /**
  * FUNÇÃO QUE RETORNA O ID DO UTILIZADOR LOGADO
  */

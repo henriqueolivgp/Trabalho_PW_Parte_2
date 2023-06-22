@@ -120,10 +120,9 @@ echo 'Tabela ceia apagada!' . PHP_EOL;
 $pdo->exec(
     'CREATE TABLE ceia (
     id INTEGER PRIMARY KEY,
-    img CHAR NULL,
+    img BLOB NULL,
     titulo CHAR NOT NULL, 
-    texto TEXT NOT NULL,
-    links TEXT);'
+    texto TEXT NOT NULL);'
 );
 
 echo 'Tabela ceia criada!' . PHP_EOL;

@@ -7,7 +7,7 @@ require_once __DIR__ . '/../../src/infrastructure/bd/user.php';
 $titulo = ' - Gerir Info Ceia';
 require_once __DIR__ . '/../../APP/Compunents/header.php';
 
-$Infoceia = lerCeia();
+
 ?>
 
 <body>
@@ -33,13 +33,13 @@ $Infoceia = lerCeia();
                             <th scope="col">Img</th>
                             <th scope="col">Titulo</th>
                             <th scope="col">Texto</th>
-                            <th scope="col">Link</th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        
+
+                        $Infoceia = lerCeia();
 
                         foreach ($Infoceia as $info) {
                         ?>
@@ -48,9 +48,11 @@ $Infoceia = lerCeia();
                                 <td><?php echo $info['img']; ?></td>
                                 <td><?php echo $info['titulo']; ?></td>
                                 <td><?php echo $info['texto']; ?></td>
-                                <td><?php echo $info['link']; ?></td>
                                 <td>
-                                    <a href="../../src/controllers/admin/controlar-ceia.php?<?= 'info=atualizar&id=' . $info['id'] ?>"><button type="button" class="btn btn-info">Editar</button></a>
+                                    <a href="../../src//controllers//admin/controlar-ceia.php?<?= 'info=atualizar&id=' . $info['id'] ?>">
+                                        <button type="button" class="btn btn-info">Editar</button>
+                                    </a>
+
                                     <a href="../../src/controllers/admin/controlar-ceia.php?<?= 'info=deletar&id=' . $info['id'] ?>"><button class="btn btn-danger" type="submit">Excluir</button></a>
                                 </td>
                             </tr>
