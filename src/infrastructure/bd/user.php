@@ -448,7 +448,7 @@ function AtualizarDados($info)
     titulo = :titulo, 
     texto = :texto,  
     links = :links,
-    categoria = :categoria, 
+    categoria = :categoria 
     WHERE id = :id;";
 
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);

@@ -145,7 +145,7 @@ function AtualizarPerfilInfo($requisicao)
     }
 
     # RECUPERA DADOS DA FESTA
-    $sucesso = lerinfo($dados['id']);
+    $sucesso = lerdados($dados['id']);
 
     # GUARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
     if (!empty($_FILES['foto']['name'])) {
@@ -159,7 +159,7 @@ function AtualizarPerfilInfo($requisicao)
     if ($sucesso) {
 
         # DEFINE MENSAGEM DE SUCESSO
-        $_SESSION['sucesso'] = 'Festa alterada com sucesso!';
+        $_SESSION['sucesso'] = 'Dados alterados com sucesso!';
 
         # DEFINE O BOTÃO DE ENVIO DO FORMULÁRIO
         $dados['acao'] = 'atualizar';
