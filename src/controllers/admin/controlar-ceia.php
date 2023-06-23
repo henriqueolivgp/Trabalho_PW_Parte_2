@@ -19,11 +19,13 @@ if (isset($_POST['info'])) {
         InserirInfo($_POST);
         //salvarInformacao($_POST,$_FILES['foto']);
     }
-        ## CONTROLA A ATUALIZAÇÃO DE DADOS DE PERFIL DOS UTILIZADORES (APLICAÇÃO)
-        if ($_POST['utilizador'] == 'perfil') {
+        ## CONTROLA A ATUALIZAÇÃO DE DADOS Do ceia
+        if ($_POST['info'] == 'atualizar') {
+
 
             # ATUALIZA UM UTILIZADOR
             AtualizarPerfilInfo($_POST);
+            
         }
     
 }
@@ -176,7 +178,7 @@ function AtualizarPerfilInfo($requisicao)
 function DeleteInfo($Info)
 {
     # DEFINE O CAMINHO DO FICHEIRO
-    $caminhoFicheiro = __DIR__ . '/../../../recursos/uploadsCeia';
+    $caminhoFicheiro = __DIR__ . '/../../../recursos/uploadsCeia/';
 
     # VALIDA DADOS DO UTILIZADOR
     $retorno = deleteInfos($Info['id']);
@@ -190,6 +192,29 @@ function DeleteInfo($Info)
     # RETORNA RESULTADO DO BANCO DE DADOS
     return $retorno;
 }
+
+/*
+function DeleteInfo($Info)
+{
+    # DEFINE O CAMINHO DO FICHEIRO
+    $caminhoFicheiro = __DIR__ . '/../../../recursos/uploadsCeia/';
+
+    # COMANDO PARA APAGAR O FICHEIRO
+    if (unlink($caminhoFicheiro . $Info['img'])) {
+        echo "Arquivo removido com sucesso.";
+    } else {
+        echo "Falha ao remover o arquivo." . $Info['img'] ;
+    }
+    exit();
+
+    # VALIDA DADOS DO UTILIZADOR
+    $retorno = DeleteInfo($Info['id']);
+
+
+
+    # RETORNA RESULTADO DO BANCO DE DADOS
+    return $retorno;
+}*/
 
 /**
  * FUNÇÃO RESPONSÁVEL POR GARDAR FICHEIROS DE FOTOS NO DIRETÓRIO
@@ -230,6 +255,7 @@ function guardaFotoinfo($dados, $fotoAntiga = null)
             # COMANDO PARA APAGAR O FICHEIRO
             $caminhoCompleto = $caminhoFicheiro . $fotoAntiga;
             if (file_exists($caminhoCompleto)) {
+                echo $caminhoCompleto;
                 unlink($caminhoCompleto);
             }
         }

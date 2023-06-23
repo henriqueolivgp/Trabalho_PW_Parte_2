@@ -129,10 +129,13 @@ function AtualizarInfo($info)
     ceia SET
     img = :img, 
     titulo = :titulo, 
-    texto = :texto,   
+    texto = :texto   
     WHERE id = :id;";
 
+    #echo $info['id'],$info['titulo'],$info['texto'];
+
     $PDOStatement = $GLOBALS['pdo']->prepare($sqlUpdate);
+
 
     # EXECUTA A QUERY RETORNANDO VERDADEIRO SE CRIAÇÃO FOI FEITA
     return $PDOStatement->execute([
@@ -146,6 +149,7 @@ function AtualizarInfo($info)
 # apaga a info do ceia
 function deleteInfos($id)
 {
+
     # PREPARA A CONSULTA
     $PDOStatement = $GLOBALS['pdo']->prepare('DELETE FROM ceia WHERE id = ?;');
 
