@@ -37,8 +37,12 @@ function ceia()
         return false;
     }
 }
+<<<<<<< HEAD
 
 function corno_de_bico()
+=======
+function Percursos_Bike_Miradouros()
+>>>>>>> e1f378cef1a329a24e17cb7b3b44e65c04b1444c
 {
     if (autenticado()) {
         return lerinfo($_SESSION['id']);
@@ -46,7 +50,10 @@ function corno_de_bico()
         return false;
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e1f378cef1a329a24e17cb7b3b44e65c04b1444c
 /**
  * FUNÇÃO QUE RETORNA O ID DO UTILIZADOR LOGADO
  */

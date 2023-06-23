@@ -51,7 +51,7 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
                                 <td><?php echo $Infopercursos['links']; ?></td>
                                 <td><?php echo $Infopercursos['categoria']; ?></td>
                                 <td>
-                                    <a href="../../src//controllers//admin/controlar-Percursos.php?<?= 'info=atualizar&id=' . $Infopercursos['id'] ?>">
+                                    <a href="../../src/controllers/admin/controlar-Percursos.php?<?= 'info=atualizar&id=' . $Infopercursos['id'] ?>">
                                         <button type="button" class="btn btn-info">Editar</button>
                                     </a>
 

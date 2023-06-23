@@ -36,7 +36,28 @@ require_once __DIR__ . '/Compunents/header.php';
         </div>
     </div>
 
-     
+        <?php
+
+    $InfoPercursos_Bike_Miradouros = lerPercursos();
+
+    foreach ($InfoPercursos_Bike_Miradouros as $Infopercursos) {
+    ?>
+      <div class="container-card">
+        <!-- Aqui o col-12 esta a dizer que o card-1 dentro da row ira ocupar todo o espaco ou seja as 12 colunas -->
+        <div class="card-1 p-4 mb-4 col-12">
+          <div class="card-img-1" style="background: blue,"></div>
+          <div class="cards-body" style="border: 8px;">
+            <h1 class="card-title-1"><?php echo $Infopercursos['titulo']; ?></h1>
+            <p class="card-sub-title-1"><?php echo $Infopercursos['titulo2']; ?></p>
+            <p class="card-info-1" style="text-align:justify"><?php echo $Infopercursos['texto']; ?></p>
+            <a style="background-color: #3c6255; border: 0; width: 100px; text-decoration:none;" href="<?php echo $Infopercursos['links']; ?>">Ver mais...</a>
+            </a>
+          </div>
+        </div>
+    </div>
+    <?php
+    }
+    ?>
       <!-- Card-2-->
       <!-- Container-card contem o conteudo do card-2 -->
       <div class="container-card">
