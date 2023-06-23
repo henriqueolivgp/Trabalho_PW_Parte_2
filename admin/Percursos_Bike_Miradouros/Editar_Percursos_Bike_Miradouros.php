@@ -7,7 +7,7 @@ $titulo = ' - Editar Utilizador';
 //include_once __DIR__ . '/templates/cabecalho.php';
 require_once __DIR__ . '/../../src/infrastructure/bd/user.php';
 
-$info = Percursos();
+$info = ceia();
 
 require_once __DIR__ . '/../../APP/Compunents/header.php';
 ?>
