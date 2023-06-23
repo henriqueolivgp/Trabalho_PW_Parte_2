@@ -7,7 +7,7 @@ $titulo = ' - Editar Utilizador';
 //include_once __DIR__ . '/templates/cabecalho.php';
 require_once __DIR__ . '/../../src/infrastructure/bd/user.php';
 
-$info = ceia();
+$info = Percursos_Bike_Miradouros();
 
 require_once __DIR__ . '/../../APP/Compunents/header.php';
 ?>
