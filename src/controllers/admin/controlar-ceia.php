@@ -149,7 +149,9 @@ function AtualizarPerfilInfo($requisicao)
 
     # GUARDA FOTO EM DIRETÓRIO LOCAL E APAGA A FOTO ANTIGA ORIUNDA DA REQUISIÇÃO (FUNÇÃO LOCAL)
     if (!empty($_FILES['foto']['name'])) {
+
         $dados = guardaFoto($dados, $requisicao);
+        
     }
 
     # ATUALIZA FESTA (REPOSITÓRIO PDO)

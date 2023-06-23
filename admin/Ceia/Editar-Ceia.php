@@ -55,8 +55,12 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
               <input type="text" class="form-control" name="titulo" maxlength="100" size="100" value="<?= isset($_REQUEST['titulo']) ? $_REQUEST['titulo'] : null ?>" required>
             </div>
             <div class="input-group mb-3">
-              <span class="input-group-text">Apelido</span>
+              <span class="input-group-text">Texto</span>
               <input type="text" class="form-control" name="texto" maxlength="100" size="100" value="<?= isset($_REQUEST['texto']) ? $_REQUEST['texto'] : null ?>" required>
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01">Foto de Perfil</label>
+              <input accept="image/*" type="file" class="form-control" id="inputGroupFile01" name="foto" />
             </div>
             <div class="d-grid col-4 mx-auto">
               <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
