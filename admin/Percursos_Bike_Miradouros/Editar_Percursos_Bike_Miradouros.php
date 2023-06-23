@@ -66,7 +66,12 @@ require_once __DIR__ . '/../../APP/Compunents/header.php';
             </div>
             <div class="input-group mb-3">
               <span class="input-group-text">Categoria</span>
-              <input type="text" class="form-control" name="categoria" maxlength="100" size="100" value="<?= isset($_REQUEST['categoria']) ? $_REQUEST['categoria'] : null ?>" required>
+              <select class="form-select" aria-label="Default select example" name="categoria" maxlength="100" size="100" value="<?= isset($_REQUEST['categoria']) ? $_REQUEST['categoria'] : null ?>" required>
+                <option selected>Categoria</option>
+                <option value="1">Percursos-Pedestres</option>
+                <option value="2">Mountain-Bike</option>
+                <option value="3">Miradouros</option>
+              </select>
             </div>
             <div class="d-grid col-4 mx-auto">
               <input type="hidden" name="id" value="<?= isset($_REQUEST['id']) ? $_REQUEST['id'] : null ?>">
