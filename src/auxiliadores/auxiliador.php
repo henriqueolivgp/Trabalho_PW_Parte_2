@@ -44,7 +44,14 @@ function ceia()
         return false;
     }
 }
-
+function Percursos_Bike_Miradouros()
+{
+    if (autenticado()) {
+        return lerinfo($_SESSION['id']);
+    } else {
+        return false;
+    }
+}
 /**
  * FUNÇÃO QUE RETORNA O ID DO UTILIZADOR LOGADO
  */
