@@ -424,6 +424,9 @@ function lerPercursos()
 
     $Infopercursos = [] ;
 
+    // EXECUTA A CONSULTA
+    $PDOStatement->execute();
+
     # PERCORRE TODAS AS LINHAS TRAZENDO OS DADOS
     while ($listapercursos = $PDOStatement->fetch()) {
         $Infopercursos[] = $listapercursos;
