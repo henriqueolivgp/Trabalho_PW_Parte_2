@@ -7,13 +7,6 @@ session_start();
     Função responsavel por ver se a sessão foi iniciada ou não,
     se não foi iniciada inicia 
 */
-function iniciarSessao($iniciar = true)
-{
-    if (session_status() === PHP_SESSION_ACTIVE) {
-        session_start();
-    }
-}
-
 
 
 /**
@@ -37,6 +30,15 @@ function utilizador()
 }
 
 function ceia()
+{
+    if (autenticado()) {
+        return lerinfo($_SESSION['id']);
+    } else {
+        return false;
+    }
+}
+
+function corno_de_bico()
 {
     if (autenticado()) {
         return lerinfo($_SESSION['id']);

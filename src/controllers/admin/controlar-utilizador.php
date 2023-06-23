@@ -350,6 +350,7 @@ function guardaFoto($dados, $fotoAntiga = null)
     # DEFINE CAMINHO COMPLETO DO FICHEIRO
     $ficheiro = $caminhoFicheiro . $novoNome;
 
+
     # MOVE O FICHEIRO TEMPORÁRIO PARA O LOCAL DEFINITIVO
     if (move_uploaded_file($ficheiroTemporario, $ficheiro)) {
 
